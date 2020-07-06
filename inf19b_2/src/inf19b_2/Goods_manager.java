@@ -3,6 +3,8 @@ package inf19b_2;
 public class Goods_manager {
 
 	
+	//var[][] Lager = new Lager[3][3]
+	
 	/*
 	 *  3x3x3 Matrix
 	 *  
