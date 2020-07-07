@@ -1,14 +1,14 @@
-package inf19b_2;
+package inf19b_2.managers;
 
 import java.util.ArrayList;
 
 public class Goods_manager {
 
-	private ArrayList<String[]> comission = new ArrayList<String[]>();
 	
-	public Goods_manager(ArrayList<String[]> list) {
+	
+	public Goods_manager() {
 		
-		comission = list;		
+		
 	}
 	
 //	public void

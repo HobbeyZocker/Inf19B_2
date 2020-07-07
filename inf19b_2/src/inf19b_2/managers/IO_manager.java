@@ -1,4 +1,4 @@
-package inf19b_2;
+package inf19b_2.managers;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -24,10 +24,10 @@ public class IO_manager {
 
 				String[] good = line.split(cvsSplitBy);
 
+				comission.add(good);
+
 //				System.out.println("Good[Auftrag= " + good[0] + ", Art= " + good[1] + " , Produkt=" + good[2]
 //						+ ", Atb1= " + good[3] + ", Atb2= " + good[4] + ", Belohnung= " + good[5] + "]");
-
-				comission.add(good);
 
 			}
 

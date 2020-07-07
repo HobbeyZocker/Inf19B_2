@@ -1,6 +1,9 @@
-package inf19b_2;
+package inf19b_2.goods;
 
 import java.util.Arrays;
+
+import inf19b_2.managers.Comission_manager;
+import inf19b_2.managers.IO_manager;
 
 public class Start {
 
@@ -12,7 +15,7 @@ public class Start {
 		io_manager.readCSV(null);
 		
 		
-		System.out.println(Arrays.toString(com_manager.getOrder(1)));
+//		System.out.println(Arrays.toString(com_manager.getOrder(1)));
 		
 		
 		

@@ -1,4 +1,4 @@
-package inf19b_2;
+package inf19b_2.managers;
 
 import java.util.ArrayList;
 

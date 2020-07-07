@@ -1,4 +1,4 @@
-package inf19b_2;
+package inf19b_2.managers;
 
 public class Game_manager {
 
