@@ -2,9 +2,11 @@ package inf19b_2;
 
 public class Start {
 
-	public static void main(String Args) {
+	public static void main(String[]args) {
 	                                 
+		IO_manager io_manager = new IO_manager();
 		
+		io_manager.readCSV(null);
 		
 	}
 	
