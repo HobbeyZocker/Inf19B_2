@@ -1,12 +1,20 @@
 package inf19b_2;
 
+import java.util.Arrays;
+
 public class Start {
 
 	public static void main(String[]args) {
 	                                 
 		IO_manager io_manager = new IO_manager();
+		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
 		
 		io_manager.readCSV(null);
+		
+		
+		System.out.println(Arrays.toString(com_manager.getOrder(1)));
+		
+		
 		
 	}
 	

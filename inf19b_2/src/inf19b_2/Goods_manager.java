@@ -1,7 +1,22 @@
 package inf19b_2;
 
+import java.util.ArrayList;
+
 public class Goods_manager {
 
+	private ArrayList<String[]> comission = new ArrayList<String[]>();
+	
+	public Goods_manager(ArrayList<String[]> list) {
+		
+		comission = list;		
+	}
+	
+//	public void
+	
+	
+	
+	
+	
 	
 	//var[][] Lager = new Lager[3][3]
 	
