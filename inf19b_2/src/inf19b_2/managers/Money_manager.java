@@ -9,14 +9,14 @@ public class Money_manager {
 	// Umlagerung[re], Verschrottung[del]), betrag
 	private ArrayList<String[]> bookingList = new ArrayList<String[]>();
 
-	private static int bank;
+	private static int bank;													
 	private static int revenue;
 	private static int expenses;
 
-	private void book(String amount, String type) {
-		booking[0] = String.valueOf(Integer.parseInt(booking[0]) + 1);
-		booking[1] = type;
-		booking[2] = amount;
+	private void book(String amount, String type) {							//makes a new Array, ready to be added to the ArrayList
+		booking[0] = String.valueOf(Integer.parseInt(booking[0]) + 1);		//Number Tab
+		booking[1] = type;													//Type of commission 
+		booking[2] = amount;												//how much money gets added or subtracted
 	}
 
 	private static void addMoney(int money) {
@@ -29,23 +29,23 @@ public class Money_manager {
 		expenses += money;
 	}
 
-	public void addBooking(int money, String type) {
+	public void addBooking(int money, String type) {						//get called for action made
 		switch (type) {
 
-		case "in":
+		case "in":															//every booking where you make money
 		case "out":
 			addMoney(money);
-			book("+" + String.valueOf(money), type);
+			book("+" + String.valueOf(money), type);						//new string[]
 			break;
 
-		case "re":
+		case "re":															//every booking where you loose money
 		case "del":
 			subMoney(money);
-			book("-" + String.valueOf(money), type);
+			book("-" + String.valueOf(money), type);						//new string[]
 			break;
 
 		default:
-//			throw exception falsche typen
+//			throw exception falsche typen									//excption for when the type is wrong, shouldn't happen tho
 
 		}
 
