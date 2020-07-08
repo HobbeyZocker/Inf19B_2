@@ -19,5 +19,18 @@ public class Comission_manager {
 			
 		return order;
 	}
+	
+	public void acceptOrder(int orderNum) {
+		//call goods_Manager
+		// add money to money manager
+	}
+	
+	public void rejektOrder(int orderNum) {
+		//call goods_Manager
+	}
+	
+	public void skipOrder(int orderNum) {
+		//call goods_Manager
+	}
 
 }

@@ -1,7 +1,8 @@
 package inf19b_2;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
+import inf19b_2.UI.UI_start;
 import inf19b_2.managers.Comission_manager;
 import inf19b_2.managers.IO_manager;
 
@@ -11,6 +12,9 @@ public class Start {
 	                                 
 		IO_manager io_manager = new IO_manager();
 		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
+		UI_start ui_start = new UI_start();
+		
+		UI_start.go(null);
 		
 		io_manager.readCSV(null);
 		

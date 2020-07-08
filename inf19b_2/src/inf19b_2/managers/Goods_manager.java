@@ -1,6 +1,6 @@
 package inf19b_2.managers;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class Goods_manager {
 
