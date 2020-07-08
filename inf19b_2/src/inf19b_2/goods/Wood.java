@@ -1,9 +1,12 @@
 package inf19b_2.goods;
 
-public class Wood {
+public class Wood extends good {
 
 	private String type, form;
-	private char special = 'l'; 
+	
+	public Wood() {
+		super.name = 'w';
+	}
 	
 	public void setType (String type) {
 		this.type = type;

@@ -3,29 +3,62 @@ package inf19b_2.managers;
 //import java.util.ArrayList;
 
 import java.util.Stack;
+import inf19b_2.goods.good;
 
 public class Goods_manager {
 
-	public Stack<Object> one;
-	public Stack<Object> two;
-	public Stack<Object> three;
-	public Stack<Object> four;
-	public Stack<Object> five;
-	public Stack<Object> six;
-	public Stack<Object> seven;
-	public Stack<Object> eight;
-	public Stack<Object> nine;
+	public Stack<Object> one = new Stack<Object>();
+	public Stack<Object> two = new Stack<Object>();
+	public Stack<Object> three = new Stack<Object>();
+	public Stack<Object> four = new Stack<Object>();
+	public Stack<Object> five = new Stack<Object>();
+	public Stack<Object> six = new Stack<Object>();
+	public Stack<Object> seven = new Stack<Object>();
+	public Stack<Object> eight = new Stack<Object>();
+	public Stack<Object> nine = new Stack<Object>();
 
 	public Goods_manager() {
 
 	}
-	
-	public void addObj(Object obj) {
-		
+
+	private int getSize(Stack stack) {
+		return stack.size();
 	}
 	
-	public int getSize() {
-		return 0;
+	private boolean lookForSpace() {
+		return true;
+	}
+
+	private void addToStackWood() {
+
+	}
+
+	private void addToStackPaper() {
+
+	}
+
+	private void addToStackStone() {
+//		if (getSize(eight) < 3
+	}
+
+	public void addObj(Object objImp) {
+
+		good obj = (good) objImp;
+
+		if (obj.name == 's') {
+			// add to 7-9
+			System.out.println("stein klappt");
+			one.add(obj);
+		} else if (obj.name == 'w') {
+			System.out.println("holz klappt");
+			one.add(obj);
+
+		} else if (obj.name == 'p') {
+			System.out.println("papier klappt");
+			one.add(obj);
+
+		} else
+			throw new RuntimeException("Object not allowed");
 	}
 
 //	public void

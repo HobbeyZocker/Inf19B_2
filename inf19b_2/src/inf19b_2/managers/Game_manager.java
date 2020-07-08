@@ -3,7 +3,7 @@ package inf19b_2.managers;
 public class Game_manager {
 
 	/*TODO:
-	 * 		MoneyMangaer exception für wenn der typ falsch ist
+	 * 		
 	 * 		
 	 */
 	

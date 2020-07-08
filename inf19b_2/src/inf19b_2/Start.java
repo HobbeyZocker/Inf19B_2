@@ -3,8 +3,8 @@ package inf19b_2;
 //import java.util.Arrays;
 
 import inf19b_2.UI.UI_start;
-import inf19b_2.managers.Comission_manager;
-import inf19b_2.managers.IO_manager;
+import inf19b_2.managers.*;
+import inf19b_2.goods.*;
 
 public class Start {
 
@@ -14,9 +14,26 @@ public class Start {
 		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
 		UI_start ui_start = new UI_start();
 		
-		UI_start.go(null);
+//		UI_start.go(null);
 		
-		io_manager.readCSV(null);
+//		io_manager.readCSV(null);
+		
+		Stone stone = new Stone();
+		Paper paper = new Paper();
+		Wood wood  = new Wood();
+		Goods_manager goods_manager = new Goods_manager();
+		
+		goods_manager.addObj(stone);
+		goods_manager.addObj(paper);
+		goods_manager.addObj(paper);
+		goods_manager.addObj(wood);
+		
+		
+		
+		
+		
+		
+		
 		
 		
 //		System.out.println(Arrays.toString(com_manager.getOrder(1)));

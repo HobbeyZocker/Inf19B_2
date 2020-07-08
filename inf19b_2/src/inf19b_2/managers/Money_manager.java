@@ -45,7 +45,7 @@ public class Money_manager {
 			break;
 
 		default:
-//			throw exception falsche typen									//excption for when the type is wrong, shouldn't happen tho
+			throw new RuntimeException("Wrong type used, Money_manager");									//excption for when the type is wrong, shouldn't happen tho
 
 		}
 
