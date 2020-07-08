@@ -1,4 +1,4 @@
-package inf19b_2.goods;
+package inf19b_2;
 
 import java.util.Arrays;
 

@@ -1,7 +1,6 @@
 package inf19b_2.managers;
 
-// import JavaFx.*;
-
+import javafx.*;
 
 public class UI_manager {
 

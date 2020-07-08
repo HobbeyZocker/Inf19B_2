@@ -1,5 +1,7 @@
 package inf19b_2.managers;
 
+
+
 import java.util.ArrayList;
 
 public class Comission_manager {
