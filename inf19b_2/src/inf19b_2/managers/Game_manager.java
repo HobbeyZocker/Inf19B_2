@@ -3,7 +3,7 @@ package inf19b_2.managers;
 public class Game_manager {
 
 	/*TODO:
-	 * 		
+	 * 		Woob/paper an stone anpassen
 	 * 		
 	 */
 	
@@ -15,4 +15,6 @@ public class Game_manager {
 
 	}
 	
+	
+//	public int  
 }

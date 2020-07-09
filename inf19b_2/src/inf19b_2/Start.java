@@ -18,15 +18,18 @@ public class Start {
 		
 //		io_manager.readCSV(null);
 		
-		Stone stone = new Stone();
+		Stone stone = new Stone("Mamor","Leicht");
 		Paper paper = new Paper();
 		Wood wood  = new Wood();
 		Goods_manager goods_manager = new Goods_manager();
 		
-		goods_manager.addObj(stone);
-		goods_manager.addObj(paper);
+//		goods_manager.addObj(stone);
 		goods_manager.addObj(paper);
 		goods_manager.addObj(wood);
+		goods_manager.addObj(paper);
+
+		
+		if (goods_manager.contains(stone)) System.out.println("jo"); 
 		
 		
 		

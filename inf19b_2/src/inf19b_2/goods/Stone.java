@@ -4,20 +4,14 @@ public class Stone extends good {
 
 	private String type, weight;
 
-	public Stone() {
+	public Stone(String type, String weight) {
 		super.name = 's';
-	}
-
-	public void setType(String type) {
 		this.type = type;
+		this.weight = weight;
 	}
 
 	public String getType() {
 		return type;
-	}
-
-	public void setWeight(String weight) {
-		this.weight = weight;
 	}
 
 	public String getWeight() {
