@@ -1,5 +1,7 @@
 package inf19b_2;
 
+import java.util.Objects;
+
 //import java.util.Arrays;
 
 import inf19b_2.UI.UI_start;
@@ -22,18 +24,24 @@ public class Start {
 		
  		
 		
-		Stone stone = new Stone("Mamor","Leicht");
-		Paper paper = new Paper();
-		Wood wood  = new Wood();
-		Goods_manager goods_manager = new Goods_manager();
+		Stone stone = new Stone("Mamor","leicht");
+		Stone stone2 = new Stone("Mamor","leicht");
+//		Paper paper = new Paper();
+//		Wood wood  = new Wood();
+//		Goods_manager goods_manager = new Goods_manager();
+//		
+////		goods_manager.addObj(stone);
+//		goods_manager.pushObj(paper);
+//		goods_manager.pushObj(wood);
+//		goods_manager.pushObj(paper);
+//		
+//		goods_manager.popObj();
 		
-//		goods_manager.addObj(stone);
-		goods_manager.addObj(paper);
-		goods_manager.addObj(wood);
-		goods_manager.addObj(paper);
+		if ( Objects.equals(stone.getType(), stone2.getType()) && Objects.equals(stone.getWeight(), stone2.getWeight())) System.out.println("Si amigo");
+//		test for the "same" object via type and weight 
 
 		
-		if (goods_manager.contains(stone)) System.out.println("jo"); 
+//		if (goods_manager.contains(stone)) System.out.println("jo"); 
 //		
 		
 		

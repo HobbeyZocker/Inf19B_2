@@ -15,12 +15,12 @@ public class Goods_manager {
 	private Stack<Object> seven = new Stack<Object>();
 	private Stack<Object> eight = new Stack<Object>();
 	private Stack<Object> nine = new Stack<Object>();
-	
-	private ArrayList<Stack<Object>> stacks = new ArrayList<Stack<Object>> ();
-	
-	
+
+	private ArrayList<Stack<Object>> stacks = new ArrayList<Stack<Object>>();
 
 	public Goods_manager() {
+
+//		for (int i = 0; i<9;i++)
 		stacks.add(one);
 		stacks.add(two);
 		stacks.add(three);
@@ -32,56 +32,73 @@ public class Goods_manager {
 		stacks.add(nine);
 	}
 
-	private int getSize(Stack<Object> stack) {
-		
-		return stack.size();
+	public boolean contains(Object obj, Stack<Object> stack) {
+		return stack.contains(obj);
 	}
-	
-	public boolean contains(Object obj) {
-		return one.contains(obj);
-	}
-	
+
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-		if ((3-getSize(stack)) < sizeNeeded)
-		return false;
-		else return true;
+		int i = 3 - stack.size(); // geht nicht
+		if (i < sizeNeeded)
+			return false;
+		else
+			return true;
 	}
 
 	private void addPaperToStack(Object obj) {
-		boolean stackNum[] = new boolean[9] ;
-		int call = 1;
-		
-		for (int i = 0; i < stacks.size(); i++ ) {
+		boolean stackNum[] = new boolean[9];
+		int call = 1; // placeholder
+
+		for (int i = 0; i < stacks.size(); i++) {
 			if (lookForSpace(1, stacks.get(i)))
-			stackNum[i] = true;
+				stackNum[i] = true;
 		}
-		
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
+	}
+
+	private void addStoneToStack(Object obj) {
+		boolean stackNum[] = new boolean[9];
+		int call = 1; // placeholder
+
+		for (int i = 6; i < stacks.size(); i++) {
+			if (lookForSpace(1, stacks.get(i)))
+				stackNum[i] = true;
+		}
+		// call = game_manager.xx(stackNum) get num zurück
+		stacks.get(call).push(obj);
+	}
+
+	private void addWoodToStack(Object obj) {
+		boolean stackNum[] = new boolean[9];
+		int call = 1; // placeholder
+
+		for (int i = 0; i < stacks.size(); i++) {
+			if (lookForSpace(3, stacks.get(i)))
+				stackNum[i] = true;
+		}
+		// call = game_manager.xx(stackNum) get num zurück
+		stacks.get(call).push(obj);
+	}
+
+	public void popObj() {
+		Stack<Object> pimmel = stacks.get(1);
+		Stack<Object> pimmel2 = stacks.get(2);
+		
+//		contains(obj, stack);
 		
 	}
 
-	private void addStoneToStack() {
-//		COPY FROM PAPER
-	}
-	private void addWoodToStack() {
-//		COPY FROM PAPER
-	}
-	
-	
-	
-
-	public void addObj(Object objImp) {
+	public void pushObj(Object objImp) {
 
 		good obj = (good) objImp;
 
 		if (obj.name == 's') {
 			// add to 7-9
 			System.out.println("stein klappt");
-			
+
 		} else if (obj.name == 'w') {
 			System.out.println("holz klappt");
-			one.add(obj);
+			addWoodToStack(obj);
 
 		} else if (obj.name == 'p') {
 			System.out.println("papier klappt");
@@ -96,7 +113,7 @@ public class Goods_manager {
 	// var[][] Lager = new Lager[3][3]
 
 	/*
-
+	 * 
 	 * 
 	 * 
 	 * Arten: Papier ( farbe: weiß, grün, blau ; größe: a3, a4, a5 ; special: /)

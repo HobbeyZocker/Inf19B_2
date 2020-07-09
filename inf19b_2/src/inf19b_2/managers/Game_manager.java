@@ -4,6 +4,7 @@ public class Game_manager {
 
 	/*
 	 * TODO: Woob/paper an stone anpassen
+	 * goods_manager line 43
 	 * 
 	 */
 
