@@ -2,19 +2,22 @@ package inf19b_2.managers;
 
 public class Game_manager {
 
-	/*TODO:
-	 * 		Woob/paper an stone anpassen
-	 * 		
+	/*
+	 * TODO: Woob/paper an stone anpassen
+	 * 
 	 */
-	
-	
-	
-	
-	
-	public static void newCommission(/* goods, payment/price, menge immer 1          */) {
+
+	public static void newCommission(/* goods, payment/price, menge immer 1 */) {
 
 	}
+
 	
 	
-//	public int  
+//	public int xx() {
+//	
+//		 call select stack	
+//	
+//		return xx;
+//	}  
+
 }

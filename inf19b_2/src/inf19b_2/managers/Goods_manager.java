@@ -6,17 +6,17 @@ import inf19b_2.goods.good;
 
 public class Goods_manager {
 
-	public Stack<Object> one = new Stack<Object>();
-	public Stack<Object> two = new Stack<Object>();
-	public Stack<Object> three = new Stack<Object>();
-	public Stack<Object> four = new Stack<Object>();
-	public Stack<Object> five = new Stack<Object>();
-	public Stack<Object> six = new Stack<Object>();
-	public Stack<Object> seven = new Stack<Object>();
-	public Stack<Object> eight = new Stack<Object>();
-	public Stack<Object> nine = new Stack<Object>();
+	private Stack<Object> one = new Stack<Object>();
+	private Stack<Object> two = new Stack<Object>();
+	private Stack<Object> three = new Stack<Object>();
+	private Stack<Object> four = new Stack<Object>();
+	private Stack<Object> five = new Stack<Object>();
+	private Stack<Object> six = new Stack<Object>();
+	private Stack<Object> seven = new Stack<Object>();
+	private Stack<Object> eight = new Stack<Object>();
+	private Stack<Object> nine = new Stack<Object>();
 	
-	public ArrayList<Stack<Object>> stacks = new ArrayList<Stack<Object>> ();
+	private ArrayList<Stack<Object>> stacks = new ArrayList<Stack<Object>> ();
 	
 	
 
@@ -47,21 +47,29 @@ public class Goods_manager {
 		else return true;
 	}
 
-	private void addToStackWood() {
-
-	}
-
-	private void addToStackPaper(Object obj) {
-		int i;
-		for (Stack<Object> single : stacks) {
-			lookForSpace(1, single);
-//			i = single;
+	private void addPaperToStack(Object obj) {
+		boolean stackNum[] = new boolean[9] ;
+		int call = 1;
+		
+		for (int i = 0; i < stacks.size(); i++ ) {
+			if (lookForSpace(1, stacks.get(i)))
+			stackNum[i] = true;
 		}
+		
+		// call = game_manager.xx(stackNum) get num zurück
+		stacks.get(call).push(obj);
+		
 	}
 
-	private void addToStackStone() {
-//		if (getSize(eight) < 3
+	private void addStoneToStack() {
+//		COPY FROM PAPER
 	}
+	private void addWoodToStack() {
+//		COPY FROM PAPER
+	}
+	
+	
+	
 
 	public void addObj(Object objImp) {
 
@@ -77,7 +85,7 @@ public class Goods_manager {
 
 		} else if (obj.name == 'p') {
 			System.out.println("papier klappt");
-			addToStackPaper(obj);
+			addPaperToStack(obj);
 
 		} else
 			throw new RuntimeException("Object not allowed");
@@ -88,9 +96,7 @@ public class Goods_manager {
 	// var[][] Lager = new Lager[3][3]
 
 	/*
-	 * 3x3x3 Matrix
-	 * 
-	 * Beim start 0 belegt
+
 	 * 
 	 * 
 	 * Arten: Papier ( farbe: weiß, grün, blau ; größe: a3, a4, a5 ; special: /)

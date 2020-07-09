@@ -18,6 +18,10 @@ public class Start {
 		
 //		io_manager.readCSV(null);
 		
+		
+		
+ 		
+		
 		Stone stone = new Stone("Mamor","Leicht");
 		Paper paper = new Paper();
 		Wood wood  = new Wood();
@@ -30,7 +34,7 @@ public class Start {
 
 		
 		if (goods_manager.contains(stone)) System.out.println("jo"); 
-		
+//		
 		
 		
 		
