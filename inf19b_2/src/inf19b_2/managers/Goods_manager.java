@@ -1,8 +1,9 @@
 package inf19b_2.managers;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Stack;
-import inf19b_2.goods.good;
+import inf19b_2.goods.*;
 
 public class Goods_manager {
 
@@ -37,75 +38,125 @@ public class Goods_manager {
 	}
 
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-		int i = 3 - stack.size(); // geht nicht
-		if (i < sizeNeeded)
+//		int i = ; // geht nicht		
+		if (3 - stack.size() < sizeNeeded) {
+
 			return false;
-		else
+		} else
 			return true;
 	}
 
-	private void addPaperToStack(Object obj) {
+	private void pushPaper(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
 
 		for (int i = 0; i < stacks.size(); i++) {
-			if (lookForSpace(1, stacks.get(i)))
-				stackNum[i] = true;
+			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
 
-	private void addStoneToStack(Object obj) {
+	private void pushStone(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
 
 		for (int i = 6; i < stacks.size(); i++) {
-			if (lookForSpace(1, stacks.get(i)))
-				stackNum[i] = true;
+			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
 
-	private void addWoodToStack(Object obj) {
+	private void pushWood(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
 
 		for (int i = 0; i < stacks.size(); i++) {
-			if (lookForSpace(3, stacks.get(i)))
-				stackNum[i] = true;
+			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
 
-	public void popObj() {
+	private void popPaper(Object objImp) {
+		boolean stackNum[][] = new boolean[9][4];
+		int call = 1; // placeholder
+		Stone obj = (Stone) objImp;
+
+		for (int i = 0; i < stacks.size(); i++) {
+			Stack<Object> compStack = stacks.get(i);
+			for (int j = 1; i <= 3; i++) {
+				Stone compObj = (Stone) compStack.pop();
+				stackNum[i][j] = (Objects.equals(obj.getType(), compObj.getType())
+						&& Objects.equals(obj.getWeight(), compObj.getWeight()));
+			}
+		}
+		// call = game_manager.xx(stackNum) get num zurück
+		stacks.get(call).pop();
+	}
+
+	private void popStone(Object obj) {
+
+	}
+
+	private void popWood(Object obj) {
+
+	}
+
+	public void popObj(Object objImp) {
+		good compareObj = (good) objImp;
+
+		switch (compareObj.name) {
+		case 's':
+			System.out.println("stein klappt");
+
+			break;
+
+		case 'w':
+			System.out.println("holz klappt");
+
+			break;
+
+		case 'p':
+			System.out.println("papier klappt");
+			popPaper(compareObj);
+			break;
+
+		default:
+			throw new RuntimeException("Object not allowed");
+		}
 		Stack<Object> pimmel = stacks.get(1);
 		Stack<Object> pimmel2 = stacks.get(2);
-		
+
 //		contains(obj, stack);
-		
+
 	}
 
 	public void pushObj(Object objImp) {
 
 		good obj = (good) objImp;
 
-		if (obj.name == 's') {
-			// add to 7-9
+		switch (obj.name) {
+		case 's':
 			System.out.println("stein klappt");
+			pushStone(obj);
+			break;
 
-		} else if (obj.name == 'w') {
+		case 'w':
 			System.out.println("holz klappt");
-			addWoodToStack(obj);
+			pushWood(obj);
+			break;
 
-		} else if (obj.name == 'p') {
+		case 'p':
 			System.out.println("papier klappt");
-			addPaperToStack(obj);
+			pushPaper(obj);
+			break;
 
-		} else
+		default:
 			throw new RuntimeException("Object not allowed");
+		}
+
 	}
 
 //	public void

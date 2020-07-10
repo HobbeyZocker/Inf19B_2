@@ -24,20 +24,24 @@ public class Start {
 		
  		
 		
-		Stone stone = new Stone("Mamor","leicht");
-		Stone stone2 = new Stone("Mamor","leicht");
-//		Paper paper = new Paper();
+//		Stone stone = new Stone("Mamor","leicht");
+//		Stone stone2 = new Stone("Mamor","leicht");
+		Paper paper = new Paper();
+		Paper paper2 = new Paper();
 //		Wood wood  = new Wood();
-//		Goods_manager goods_manager = new Goods_manager();
+		Goods_manager goods_manager = new Goods_manager();
 //		
-////		goods_manager.addObj(stone);
-//		goods_manager.pushObj(paper);
+//		goods_manager.pushObj(stone);
+		goods_manager.pushObj(paper);
+		goods_manager.pushObj(paper2);
+		goods_manager.pushObj(paper);
+		goods_manager.pushObj(paper2);
 //		goods_manager.pushObj(wood);
 //		goods_manager.pushObj(paper);
 //		
 //		goods_manager.popObj();
 		
-		if ( Objects.equals(stone.getType(), stone2.getType()) && Objects.equals(stone.getWeight(), stone2.getWeight())) System.out.println("Si amigo");
+//		if ( Objects.equals(stone.getType(), stone2.getType()) && Objects.equals(stone.getWeight(), stone2.getWeight())) System.out.println("Si amigo");
 //		test for the "same" object via type and weight 
 
 		
