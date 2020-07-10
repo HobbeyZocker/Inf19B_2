@@ -22,19 +22,20 @@ public class Start {
 
 		Stone stone = new Stone("Mamor", "leicht");
 		Stone stone2 = new Stone("Mamor", "leicht");
-		Paper paper = new Paper();
-		Paper paper2 = new Paper();
-		Wood wood = new Wood();
+		Paper paper = new Paper("weiﬂ","a4");
+		Paper paper2 = new Paper("Weiﬂ", "A4");
+		Wood wood = new Wood("kiefer","balken");
 		Goods_manager goods_manager = new Goods_manager();
 //		
 		goods_manager.pushObj(stone);
 		goods_manager.pushObj(stone2);
 		goods_manager.pushObj(paper);
-		goods_manager.pushObj(paper2);
-		goods_manager.pushObj(paper);
-		goods_manager.pushObj(paper2);
+//		goods_manager.pushObj(paper2);
+//		goods_manager.pushObj(paper);
+//		goods_manager.pushObj(paper2);
 		goods_manager.pushObj(wood);
-		goods_manager.pushObj(paper2);
+//		goods_manager.pushObj(paper2);
+		goods_manager.popObj(paper2);
 
 //		
 //		goods_manager.popObj();

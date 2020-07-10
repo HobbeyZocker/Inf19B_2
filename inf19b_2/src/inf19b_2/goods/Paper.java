@@ -4,7 +4,7 @@ public class Paper extends good {
 
 	private String color, size;
 
-	public Paper() {
+	public Paper(String color, String size) {
 		super.name = 'p';
 		if (color.equalsIgnoreCase("weiß") || color.equalsIgnoreCase("grün") || color.equalsIgnoreCase("blau"))
 			this.color = color.toLowerCase();

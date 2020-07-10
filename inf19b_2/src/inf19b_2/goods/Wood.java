@@ -4,7 +4,7 @@ public class Wood extends good {
 
 	private String type, form;
 
-	public Wood() {
+	public Wood(String type, String form) {
 		super.name = 'w';
 		if (type.equalsIgnoreCase("kiefer") || type.equalsIgnoreCase("buche") || type.equalsIgnoreCase("eiche"))
 			this.type = type.toLowerCase();

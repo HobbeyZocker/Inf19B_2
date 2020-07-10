@@ -40,7 +40,7 @@ public class Goods_manager {
 //	#########################################################
 
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-		return (3 - stack.size() < sizeNeeded) ;			
+		return (3 - stack.size() < sizeNeeded);
 	}
 //	#########################################################
 
@@ -86,14 +86,16 @@ public class Goods_manager {
 	private void popPaper(Object objImp) {
 		boolean stackNum[][] = new boolean[9][4];
 		int call = 1; // placeholder
-		Stone obj = (Stone) objImp;
+		Paper obj = (Paper) objImp;
 
 		for (int i = 0; i < stacks.size(); i++) {
 			Stack<Object> compStack = stacks.get(i);
 			for (int j = 1; i <= 3; i++) {
-				Stone compObj = (Stone) compStack.pop();
-				stackNum[i][j] = (Objects.equals(obj.getType(), compObj.getType())
-						&& Objects.equals(obj.getWeight(), compObj.getWeight()));
+				if (compStack.size() > 0) {
+					Paper compObj = (Paper) compStack.pop();
+					stackNum[i][j] = (Objects.equals(obj.getColor(), compObj.getColor())
+							&& Objects.equals(obj.getSize(), compObj.getSize()));
+				}
 			}
 		}
 		// call = game_manager.xx(stackNum) get num zurück

@@ -125,36 +125,47 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
+                        <Button fx:id="btn_test" layoutX="99.0" layoutY="39.0" mnemonicParsing="false" prefHeight="167.0" prefWidth="167.0" textFill="TRANSPARENT" visible="false" />
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image></ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
                            </image></ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="92.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -163,17 +174,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -182,17 +198,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -201,17 +222,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -220,17 +246,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -239,17 +270,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -258,17 +294,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -277,17 +318,22 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
                            <image>
-                              <Image url="@wood_placeholder.png" />
+                              <Image url="@textures/stone_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@stone_placeholder.png" />
+                              <Image url="@textures/wood_placeholder.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
                            <image>
-                              <Image url="@paper_placeholder.png" />
+                              <Image url="@textures/paper_placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+                           <image>
+                              <Image url="@textures/ramen_schwarz.png" />
                            </image>
                         </ImageView>
                      </children>

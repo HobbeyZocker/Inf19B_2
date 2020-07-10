@@ -3,8 +3,8 @@ package inf19b_2.managers;
 public class Game_manager {
 
 	/*
-	 * TODO: Woob/paper an stone anpassen
-	 * goods_manager line 43
+	 * TODO: 
+	 * 		game_manager.xx(stackNum) fertig machen
 	 * 
 	 */
 
@@ -16,7 +16,7 @@ public class Game_manager {
 	
 //	public int xx() {
 //	
-//		 call select stack	
+//		 call Ui / IO ,select stack	
 //	
 //		return xx;
 //	}  
