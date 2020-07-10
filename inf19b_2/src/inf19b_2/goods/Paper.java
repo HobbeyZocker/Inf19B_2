@@ -6,18 +6,19 @@ public class Paper extends good {
 
 	public Paper() {
 		super.name = 'p';
-	}
+		if (color.equalsIgnoreCase("weiß") || color.equalsIgnoreCase("grün") || color.equalsIgnoreCase("blau"))
+			this.color = color.toLowerCase();
+		else
+			throw new RuntimeException("Falsche Farbe");
 
-	public void setColor(String color) {
-		this.color = color;
+		if (size.equalsIgnoreCase("A3") || size.equalsIgnoreCase("A4") || size.equalsIgnoreCase("A5"))
+			this.size = size.toUpperCase();
+		else
+			throw new RuntimeException("Falsches Größe");
 	}
 
 	public String getColor() {
 		return this.color;
-	}
-
-	public void setSize(String size) {
-		this.size = size;
 	}
 
 	public String getSize() {

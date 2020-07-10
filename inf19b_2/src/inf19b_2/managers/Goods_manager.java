@@ -21,7 +21,6 @@ public class Goods_manager {
 
 	public Goods_manager() {
 
-//		for (int i = 0; i<9;i++)
 		stacks.add(one);
 		stacks.add(two);
 		stacks.add(three);
@@ -33,19 +32,19 @@ public class Goods_manager {
 		stacks.add(nine);
 	}
 
+//	obsolet?
 	public boolean contains(Object obj, Stack<Object> stack) {
 		return stack.contains(obj);
+
 	}
+//	#########################################################
 
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-//		int i = ; // geht nicht		
-		if (3 - stack.size() < sizeNeeded) {
-
-			return false;
-		} else
-			return true;
+		return (3 - stack.size() < sizeNeeded) ;			
 	}
+//	#########################################################
 
+//	PushPaper
 	private void pushPaper(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
@@ -56,10 +55,12 @@ public class Goods_manager {
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
+//	#########################################################
 
+//	PushStone
 	private void pushStone(Object obj) {
 		boolean stackNum[] = new boolean[9];
-		int call = 1; // placeholder
+		int call = 7; // placeholder
 
 		for (int i = 6; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(1, stacks.get(i));
@@ -67,7 +68,9 @@ public class Goods_manager {
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
+//	#########################################################
 
+//	PushWood
 	private void pushWood(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
@@ -78,6 +81,7 @@ public class Goods_manager {
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
 	}
+//	#########################################################
 
 	private void popPaper(Object objImp) {
 		boolean stackNum[][] = new boolean[9][4];
@@ -95,14 +99,17 @@ public class Goods_manager {
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).pop();
 	}
+//	#########################################################
 
 	private void popStone(Object obj) {
 
 	}
+//	#########################################################
 
 	private void popWood(Object obj) {
 
 	}
+//	#########################################################
 
 	public void popObj(Object objImp) {
 		good compareObj = (good) objImp;
@@ -132,6 +139,7 @@ public class Goods_manager {
 //		contains(obj, stack);
 
 	}
+//	#########################################################
 
 	public void pushObj(Object objImp) {
 
@@ -158,6 +166,7 @@ public class Goods_manager {
 		}
 
 	}
+//	#########################################################
 
 //	public void
 
