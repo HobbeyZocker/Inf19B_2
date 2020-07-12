@@ -16,331 +16,332 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Pane prefHeight="30.0" prefWidth="1046.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.Controller">
+	<children>
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0">
          <children>
-            <Label text="Bank:">
-               <padding>
-                  <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="90.0" text="1500 €">
-               <padding>
-                  <Insets bottom="5.0" right="50.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="150.0" text="+ 200 €" textFill="#33af47">
-               <padding>
-                  <Insets bottom="5.0" right="50.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="150.0" text="- 200 €" textFill="#f84116">
-               <padding>
-                  <Insets bottom="5.0" left="4.0" right="50.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="300.0" text="Freie Plätze:">
-               <padding>
-                  <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="425.0" text="2">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label layoutX="435.0" text="/27">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" top="5.0" />
-               </padding>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="1046.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0">
-         <children>
-            <Label text="(c) Anton Reuter">
-               <padding>
-                  <Insets bottom="5.0" left="50.0" right="5.0" />
-               </padding>
-            </Label>
-            <Button alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="190.0" layoutY="-5.0" lineSpacing="1.0" mnemonicParsing="false" scaleX="0.6" scaleY="0.5" scaleZ="0.5" text="Impressum" textAlignment="CENTER" />
-         </children>
-      </Pane>
-      <TabPane layoutX="592.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <tabs>
-          <Tab text="Aktuell">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ListView prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
-                        <AnchorPane prefHeight="85.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
-                           <children>
-                              <Button mnemonicParsing="false" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
-                                 <font>
-                                    <Font size="13.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-                              <Button mnemonicParsing="false" text="Nächster Auftrag" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="Bilanz">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="664.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab text="Verlauf">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="664.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
-         <children>
-            <GridPane prefHeight="650.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <Pane layoutX="20.0" prefHeight="27.0" prefWidth="318.0">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_test" layoutX="99.0" layoutY="39.0" mnemonicParsing="false" prefHeight="167.0" prefWidth="167.0" textFill="TRANSPARENT" visible="false" />
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image></ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image></ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="92.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="357.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="227.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="444.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="357.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="357.0" layoutY="227.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="357.0" layoutY="444.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/stone_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@textures/wood_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
-                           <image>
-                              <Image url="@textures/paper_placeholder.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
-                           <image>
-                              <Image url="@textures/ramen_schwarz.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
+      				<Label text="Bank:">
+      					<padding>
+      						<Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
+      					</padding>
+      				</Label>
+      				<Label layoutX="90.0" text="1500 €">
+      					<padding>
+      						<Insets bottom="5.0" right="50.0" top="5.0" />
+      					</padding>
+      				</Label>
+      				<Label layoutX="170.0" text="+ 200 €" textFill="#33af47">
+      					<padding>
+      						<Insets bottom="5.0" right="50.0" top="5.0" />
+      					</padding>
+      				</Label>
+      				<Label layoutX="170.0" text="- 200 €" textFill="#f84116">
+      					<padding>
+      						<Insets bottom="5.0" left="4.0" right="50.0" top="5.0" />
+      					</padding>
+      				</Label>
+                  <Button layoutX="300.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
                </children>
-            </GridPane>
+            </Pane>
+            <Pane prefHeight="27.0" prefWidth="1015.0" AnchorPane.rightAnchor="-719.0" AnchorPane.topAnchor="0.0">
+               <children>
+      				<Label text="Freie Plätze:">
+      					<padding>
+      						<Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
+      					</padding>
+      				</Label>
+      				<Label layoutX="150.0" text="2">
+      					<padding>
+      						<Insets bottom="5.0" left="10.0" top="5.0" />
+      					</padding>
+      				</Label>
+      				<Label layoutX="160.0" text="/ 27">
+      					<padding>
+      						<Insets bottom="5.0" left="10.0" top="5.0" />
+      					</padding>
+      				</Label>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
-   </children>
+		<Pane layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="1046.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0">
+			<children>
+				<Label text="(c) Anton Reuter">
+					<padding>
+						<Insets bottom="5.0" left="50.0" right="5.0" />
+					</padding>
+				</Label>
+				<Button alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="190.0" layoutY="-5.0" lineSpacing="1.0" mnemonicParsing="false" scaleX="0.6" scaleY="0.5" scaleZ="0.5" text="Impressum" textAlignment="CENTER" />
+			</children>
+		</Pane>
+		<TabPane layoutX="592.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab text="Aktuell">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ListView prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
+								<AnchorPane prefHeight="85.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
+									<children>
+										<Button mnemonicParsing="false" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+											<font>
+												<Font size="13.0" />
+											</font>
+										</Button>
+										<Button mnemonicParsing="false" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+										<Button mnemonicParsing="false" text="Nächster Auftrag" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+									</children>
+								</AnchorPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Verlauf">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ScrollPane hbarPolicy="NEVER" prefHeight="664.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
+			<children>
+				<GridPane prefHeight="650.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<AnchorPane fx:id="grid_one" onMouseClicked="#gridOneClicked" prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fx:id="grid_one_frame" fitHeight="167.0" fitWidth="167.0" layoutX="92.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_four" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridFourClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_seven" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridSevenClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_two" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridTwoClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_five" layoutX="10.0" layoutY="227.0" onMouseClicked="#gridFiveClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_eight" layoutX="10.0" layoutY="444.0" onMouseClicked="#gridEightClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_three" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridThreeClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_six" layoutX="357.0" layoutY="227.0" onMouseClicked="#gridSixClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<AnchorPane fx:id="grid_nine" layoutX="357.0" layoutY="444.0" onMouseClicked="#gridNineClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+							<children>
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/stone_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@textures/wood_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
+									<image>
+										<Image url="@textures/paper_placeholder.png" />
+									</image>
+								</ImageView>
+								<ImageView fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+									<image>
+										<Image url="@textures/ramen_schwarz.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+					</children>
+				</GridPane>
+			</children>
+		</AnchorPane>
+	</children>
 </AnchorPane>

@@ -135,10 +135,6 @@ public class Goods_manager {
 		default:
 			throw new RuntimeException("Object not allowed");
 		}
-		Stack<Object> pimmel = stacks.get(1);
-		Stack<Object> pimmel2 = stacks.get(2);
-
-//		contains(obj, stack);
 
 	}
 //	#########################################################
