@@ -1,4 +1,4 @@
-package inf19b_2;
+package inf19b_2.main;
 
 import java.util.Objects;
 
@@ -10,13 +10,14 @@ import inf19b_2.goods.*;
 
 public class Start {
 
+
 	public static void main(String[] args) {
 
 		IO_manager io_manager = new IO_manager();
 		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
 		UI_start ui_start = new UI_start();
 
-		UI_start.go(null);
+		ui_start.go(null);
 
 //		io_manager.readCSV(null);
 

@@ -10,8 +10,8 @@ public class UI_start extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Test.fxml"));
-        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource("mask.fxml"));
+        primaryStage.setTitle("Lager Logistik");
         primaryStage.setScene(new Scene(root, 1250, 700));
         primaryStage.show();
     }
