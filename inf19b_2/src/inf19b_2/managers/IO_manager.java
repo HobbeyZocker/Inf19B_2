@@ -10,6 +10,9 @@ public class IO_manager {
 	private String csvFile = "C:\\Users\\AntonFelixReuterAwes\\git\\Inf19B_2\\Leistungsnachweis.csv";
 	private String line = "";
 	private String cvsSplitBy = ";";
+	
+	private int clickedGrid = 10;
+	
 
 	private ArrayList<String[]> comission = new ArrayList<String[]>();
 
@@ -40,5 +43,25 @@ public class IO_manager {
 	public ArrayList<String[]> getComissionsList() {
 		return comission;
 	}
+	
+	
+	
+	public void setClickedGrid(int clickedGrid) {
+		this.clickedGrid = clickedGrid;
+		System.out.print("hm");
+	}
+	
+	public int getClickedGrid() {
+		if (clickedGrid < 9) {
+			
+			int temp = clickedGrid;
+//			clickedGrid = 10;
+			System.out.print(temp);
+			return temp;
+		} else
+			return 10;
+	}
+
+
 
 }

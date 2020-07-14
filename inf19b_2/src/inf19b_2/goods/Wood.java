@@ -5,7 +5,7 @@ public class Wood extends good {
 	private String type, form;
 
 	public Wood(String type, String form) {
-		super.name = 'w';
+
 		if (type.equalsIgnoreCase("kiefer") || type.equalsIgnoreCase("buche") || type.equalsIgnoreCase("eiche"))
 			this.type = type.toLowerCase();
 		else
@@ -15,6 +15,12 @@ public class Wood extends good {
 			this.form = form.toLowerCase();
 		else
 			throw new RuntimeException("Falsches Stein Gewicht");
+
+		if (this.form == "balken")
+			super.name = 'b';
+		else
+			super.name = 'w';
+
 	}
 
 	public String getType() {

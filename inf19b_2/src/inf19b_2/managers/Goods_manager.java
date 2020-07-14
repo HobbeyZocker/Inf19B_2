@@ -45,7 +45,7 @@ public class Goods_manager {
 //	#########################################################
 
 //	PushPaper
-	private void pushPaper(Object obj) {
+	private void pushPaperAndWood(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
 
@@ -71,12 +71,12 @@ public class Goods_manager {
 //	#########################################################
 
 //	PushWood
-	private void pushWood(Object obj) {
+	private void pushWoodedBeams(Object obj) {
 		boolean stackNum[] = new boolean[9];
 		int call = 1; // placeholder
 
 		for (int i = 0; i < stacks.size(); i++) {
-			stackNum[i] = lookForSpace(1, stacks.get(i));
+			stackNum[i] = lookForSpace(3, stacks.get(i));
 		}
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).push(obj);
@@ -126,6 +126,11 @@ public class Goods_manager {
 			System.out.println("holz klappt");
 
 			break;
+			
+		case 'b':
+			System.out.println("holz klappt");
+			
+			break;
 
 		case 'p':
 			System.out.println("papier klappt");
@@ -149,14 +154,19 @@ public class Goods_manager {
 			pushStone(obj);
 			break;
 
-		case 'w':
+		case 'b':
 			System.out.println("holz klappt");
-			pushWood(obj);
+			pushWoodedBeams(obj);
 			break;
 
+		case 'w':
+			System.out.println("papier klappt");
+			pushPaperAndWood(obj);
+			break;
+			
 		case 'p':
 			System.out.println("papier klappt");
-			pushPaper(obj);
+			pushPaperAndWood(obj);
 			break;
 
 		default:

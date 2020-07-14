@@ -11,13 +11,24 @@ import inf19b_2.goods.*;
 public class Start {
 
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 
 		IO_manager io_manager = new IO_manager();
 		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
 		UI_start ui_start = new UI_start();
+		Game_manager game_manager = new Game_manager();
 
 		ui_start.go(null);
+		
+		
+		
+		boolean test[] = new boolean[11];
+		test[5] = true;		
+		System.out.println(game_manager.chooseStack(test));
+		
+
+		
 
 //		io_manager.readCSV(null);
 
