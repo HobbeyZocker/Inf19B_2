@@ -84,8 +84,7 @@
 											</font>
 										</Button>
 										<Button fx:id="btn_reject" mnemonicParsing="false" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-										<Button fx:id="btw_next_cont" layoutY="85.0" mnemonicParsing="false" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                  <Button fx:id="btw_move_cont" layoutX="69.0" layoutY="45.0" mnemonicParsing="false" text="Auftrag Schieben" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+										<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                   <Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                   <Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 									</children>
@@ -128,6 +127,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_one_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#oneHoverOn" onMouseExited="#oneHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_four" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridFourClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -152,6 +156,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_four_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#fourHoverOn" onMouseExited="#fourHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_seven" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridSevenClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
@@ -176,6 +185,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_seven_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#sevenHoverOn" onMouseExited="#sevenHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_two" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridTwoClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -200,6 +214,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_two_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#twoHoverOn" onMouseExited="#twoHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_five" layoutX="10.0" layoutY="227.0" onMouseClicked="#gridFiveClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -224,6 +243,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_five_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#fiveHoverOn" onMouseExited="#fiveHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_eight" layoutX="10.0" layoutY="444.0" onMouseClicked="#gridEightClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -248,6 +272,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_eight_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#eightHoverOn" onMouseExited="#eightHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_three" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridThreeClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -272,9 +301,14 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_three_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#threeHoverOn" onMouseExited="#threeHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_six" layoutX="357.0" layoutY="227.0" onMouseClicked="#gridSixClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+						<AnchorPane fx:id="grid_six" layoutX="357.0" layoutY="227.0" onMouseClicked="#gridSixClicked" onMouseEntered="#sixHoverOn" onMouseExited="#sixHoverOff" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
 							<children>
 								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
@@ -296,6 +330,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_six_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 						<AnchorPane fx:id="grid_nine" layoutX="357.0" layoutY="444.0" onMouseClicked="#gridNineClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -320,6 +359,11 @@
 										<Image url="@textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
+                        <ImageView fx:id="grid_nine_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#nineHoverOn" onMouseExited="#nineHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@textures/ramen_blau.png" />
+                           </image>
+                        </ImageView>
 							</children>
 						</AnchorPane>
 					</children>
