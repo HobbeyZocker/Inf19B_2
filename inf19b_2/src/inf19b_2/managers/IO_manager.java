@@ -48,7 +48,7 @@ public class IO_manager {
 	
 	public void setClickedGrid(int clickedGrid) {
 		this.clickedGrid = clickedGrid;
-		System.out.print("hm");
+		System.out.print(this.clickedGrid);
 	}
 	
 	public int getClickedGrid() {

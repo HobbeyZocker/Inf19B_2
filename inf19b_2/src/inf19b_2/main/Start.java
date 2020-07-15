@@ -13,7 +13,7 @@ public class Start {
 
 
 	@SuppressWarnings("static-access")
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 
 		IO_manager io_manager = new IO_manager();
 		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
@@ -23,7 +23,7 @@ public class Start {
 
 		
 		
-		ui_start.go(null); //<- böse böse du bleibst hängen
+//		ui_start.go(null); //<- böse böse du bleibst hängen
 
 		
 		
