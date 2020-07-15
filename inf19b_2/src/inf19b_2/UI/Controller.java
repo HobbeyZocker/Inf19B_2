@@ -65,13 +65,14 @@ public class Controller {
 	// ######## FXML Declaration done ##############
 
 	private int clickedGrid = 10;
-	
+
 	IO_manager io_manager = new IO_manager();
 
 	// ######## clicked on grid ##############
 	public void gridOneClicked() {
 		System.out.println("test1");
 		this.clickedGrid = 0;
+	setAllFramesRed();
 	}
 
 	public void gridTwoClicked() {
@@ -97,7 +98,7 @@ public class Controller {
 	public void gridSixClicked() {
 		System.out.println("test6");
 		io_manager.setClickedGrid(5);
-		
+
 	}
 
 	public void gridSevenClicked() {
@@ -191,22 +192,22 @@ public class Controller {
 
 	// ######## Change multiple grid color ##############
 
-	
 	public void setAllFramesRed() {
-//		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
-//		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		System.out.println("tse");
+		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
+		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
 	}
 
-	
 	public void setSomeFramesGreen(boolean[] stackNum) {
-//		setAllFramesRed();
+	
+		 setAllFramesRed();
 //		if (stackNum[0] == true)
 //			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 //		if (stackNum[1] == true)
@@ -227,7 +228,6 @@ public class Controller {
 //			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 	}
 
-	
 	public void setAllFramesBlack() {
 //		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 //		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
@@ -244,7 +244,7 @@ public class Controller {
 
 	public int getClickedGrid() {
 		if (clickedGrid < 9) {
-			
+
 			int temp = clickedGrid;
 			clickedGrid = 10;
 			System.out.print(temp);

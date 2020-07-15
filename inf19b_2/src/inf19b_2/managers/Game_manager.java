@@ -1,6 +1,7 @@
 package inf19b_2.managers;
 
 import java.util.concurrent.TimeUnit;
+import inf19b_2.UI.textures.ImageLocation;
 import inf19b_2.UI.Controller;
 
 public class Game_manager {
@@ -35,13 +36,14 @@ public class Game_manager {
 			
 				System.out.print(io_manager.getClickedGrid());
 				
-				try {
-					
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+//				try {
+//					
+//					Thread.sleep(1000);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				
 //			try catch 			TimeUnit.SECONDS.sleep(1); 
 			}
 

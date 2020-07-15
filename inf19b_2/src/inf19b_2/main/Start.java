@@ -1,6 +1,7 @@
 package inf19b_2.main;
 
 import java.util.Objects;
+import inf19b_2.UI.textures.ImageLocation;
 
 //import java.util.Arrays;
 
@@ -19,7 +20,11 @@ public class Start {
 		UI_start ui_start = new UI_start();
 		Game_manager game_manager = new Game_manager();
 
-		ui_start.go(null);
+
+		
+		
+		ui_start.go(null); //<- böse böse du bleibst hängen
+
 		
 		
 		
@@ -65,6 +70,7 @@ public class Start {
 }
 
 /*
+ * 
  * Instructions: Allgemeine Hinweise:
  * 
  * Zu Implementieren ist die Programmieraufgabe in Java (Lauffähig in Java SE
