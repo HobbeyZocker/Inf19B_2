@@ -39,7 +39,7 @@
       						<Insets bottom="5.0" left="4.0" right="50.0" top="5.0" />
       					</padding>
       				</Label>
-                  <Button fx:id="btn_bilanz" layoutX="300.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
+                  <Button fx:id="btn_bilanz" layoutX="300.0" mnemonicParsing="false" onAction="#btnShowAccount" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
                </children>
             </Pane>
             <Pane prefHeight="27.0" prefWidth="1015.0" AnchorPane.rightAnchor="-719.0" AnchorPane.topAnchor="0.0">
@@ -75,18 +75,18 @@
 		</Pane>
 						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 							<children>
-								<ListView prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
+								<ListView fixedCellSize="66.0" layoutX="10.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="29.0" />
 								<AnchorPane prefHeight="262.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
 									<children>
-										<Button fx:id="btn_accept" mnemonicParsing="false" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+										<Button fx:id="btn_accept" mnemonicParsing="false" onAction="#btnAccept" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
 											<font>
 												<Font size="13.0" />
 											</font>
 										</Button>
-										<Button fx:id="btn_reject" mnemonicParsing="false" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-										<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                  <Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                  <Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+										<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+										<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" onAction="#btnNewCom" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnMove" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 									</children>
 								</AnchorPane>
 							</children>

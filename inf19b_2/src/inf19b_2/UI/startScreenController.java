@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-
 public class startScreenController {
 
 	@FXML
@@ -16,11 +15,10 @@ public class startScreenController {
 	@FXML
 	public void Start() {
 
-
 		Stage t = (Stage) btn_switch.getScene().getWindow();
-		
+
 		try {
-			t.setScene(new Scene (FXMLLoader.load(getClass().getResource("mask.fxml")),1250,700));
+			t.setScene(new Scene(FXMLLoader.load(getClass().getResource("mask.fxml")), 1250, 700));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

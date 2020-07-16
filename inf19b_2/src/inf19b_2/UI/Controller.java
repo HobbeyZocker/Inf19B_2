@@ -1,10 +1,14 @@
 package inf19b_2.UI;
 
+import com.sun.glass.events.MouseEvent;
+
 import inf19b_2.UI.textures.ImageLocation;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.IO_manager;
 import javafx.scene.image.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 
 public class Controller {
@@ -68,11 +72,15 @@ public class Controller {
 
 	IO_manager io_manager = new IO_manager();
 
+	public Controller() {
+
+	}
+
 	// ######## clicked on grid ##############
 	public void gridOneClicked() {
 		System.out.println("test1");
 		this.clickedGrid = 0;
-	setAllFramesRed();
+		setAllFramesRed();
 	}
 
 	public void gridTwoClicked() {
@@ -192,8 +200,8 @@ public class Controller {
 
 	// ######## Change multiple grid color ##############
 
-	public void setAllFramesRed() {
-		System.out.println("tse");
+	private void setAllFramesRed() {
+
 		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
 		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
 		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
@@ -206,38 +214,38 @@ public class Controller {
 	}
 
 	public void setSomeFramesGreen(boolean[] stackNum) {
-	
-		 setAllFramesRed();
-//		if (stackNum[0] == true)
-//			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[1] == true)
-//			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[2] == true)
-//			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[3] == true)
-//			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[4] == true)
-//			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[5] == true)
-//			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[6] == true)
-//			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[7] == true)
-//			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
-//		if (stackNum[8] == true)
-//			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+
+		setAllFramesRed();
+		if (stackNum[0] == true)
+			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[1] == true)
+			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[2] == true)
+			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[3] == true)
+			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[4] == true)
+			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[5] == true)
+			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[6] == true)
+			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[7] == true)
+			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[8] == true)
+			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 	}
 
 	public void setAllFramesBlack() {
-//		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
-//		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
+		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 	}
 
 	// ############## FXML done ################
@@ -251,6 +259,32 @@ public class Controller {
 			return temp;
 		} else
 			return 10;
+	}
+
+	// ############## button Handlers ################
+
+	public void btnAccept() {
+		setAllFramesBlack();
+	}
+
+	public void btnDecline() {
+//		xxx
+	}
+
+	public void btnNewCom() {
+//		xxx
+	}
+
+	public void btnMove() {
+//		xxx
+	}
+
+	public void btnDestroy() {
+//		xxx
+	}
+
+	public void btnShowAccount() {
+//		xxx
 	}
 
 }
