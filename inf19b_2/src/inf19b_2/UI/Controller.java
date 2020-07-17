@@ -1,17 +1,18 @@
 package inf19b_2.UI;
 
-import com.sun.glass.events.MouseEvent;
 
 import inf19b_2.UI.textures.ImageLocation;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.IO_manager;
 import javafx.scene.image.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 
 public class Controller {
+	
+//	#########################################
+//	#			Declaration					#
+//	#########################################
 
 	@FXML
 	private ImageView grid_one_frame;
@@ -66,17 +67,23 @@ public class Controller {
 	@FXML
 	private ImageView grid_nine_frame_hover;
 
-	// ######## FXML Declaration done ##############
 
 	private int clickedGrid = 10;
-
+	
 	IO_manager io_manager = new IO_manager();
 
-	public Controller() {
+//	#########################################
+//	#										#
+//	#########################################
+	
+	public void initialize() {
 
 	}
 
-	// ######## clicked on grid ##############
+//	#########################################
+//	#			Click on grid				#
+//	#########################################
+	
 	public void gridOneClicked() {
 		System.out.println("test1");
 		this.clickedGrid = 0;
@@ -124,7 +131,9 @@ public class Controller {
 		this.clickedGrid = 8;
 	}
 
-	// ######## Hover over grid ##############
+//	#########################################
+//	#			Hover over grid				#
+//	#########################################
 
 	public void oneHoverOn() {
 		grid_one_frame_hover.setOpacity(1);
@@ -198,7 +207,9 @@ public class Controller {
 		grid_nine_frame_hover.setOpacity(0);
 	}
 
-	// ######## Change multiple grid color ##############
+//	#########################################	
+//	#		Change multiple grid color 		#	
+//	#########################################
 
 	private void setAllFramesRed() {
 
@@ -214,7 +225,6 @@ public class Controller {
 	}
 
 	public void setSomeFramesGreen(boolean[] stackNum) {
-
 		setAllFramesRed();
 		if (stackNum[0] == true)
 			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
@@ -248,7 +258,9 @@ public class Controller {
 		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 	}
 
-	// ############## FXML done ################
+//	#########################################
+//	#										#
+//	#########################################
 
 	public int getClickedGrid() {
 		if (clickedGrid < 9) {
@@ -261,7 +273,9 @@ public class Controller {
 			return 10;
 	}
 
-	// ############## button Handlers ################
+//	#########################################
+//	#			Button Actions				#
+//	#########################################
 
 	public void btnAccept() {
 		setAllFramesBlack();
