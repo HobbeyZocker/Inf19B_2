@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.startScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#Start" onKeyTyped="#Start" onMouseClicked="#Start" prefHeight="700.0" prefWidth="1250.0" style="-fx-background-color: #516a9a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.startScreenController">
    <children>
-      <Button fx:id="btn_switch" layoutX="372.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#Start" text="Button" />
+      <ImageView accessibleText="company_logo" layoutX="308.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="120.0">
+         <image>
+            <Image url="@../resources/textures/splashScreen.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="btn_switch" layoutX="134.0" layoutY="502.0" mnemonicParsing="false" onMouseClicked="#Start" text="Button" visible="false" />
+      <Label fx:id="label_one" alignment="CENTER" layoutX="611.0" layoutY="590.0" text="Drücke eine Knopf zum Starten" textAlignment="CENTER" textFill="#90addb" visible="false" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+         <font>
+            <Font name="Broadway" size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -1,7 +1,7 @@
 package inf19b_2.main;
 
 import java.util.Objects;
-import inf19b_2.UI.textures.ImageLocation;
+import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.managers.*;
 import inf19b_2.goods.*;
 

@@ -1,17 +1,25 @@
 package inf19b_2.UI;
 
 import java.io.File;
-import inf19b_2.UI.textures.ImageLocation;
+import java.io.IOException;
+
+import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.managers.Comission_manager;
 import inf19b_2.managers.Game_manager;
+import inf19b_2.managers.Goods_manager;
 import inf19b_2.managers.IO_manager;
 import inf19b_2.managers.Money_manager;
 import javafx.scene.image.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 public class Controller {
 
@@ -76,25 +84,22 @@ public class Controller {
 
 	@FXML
 	private AnchorPane start_ap;
-	
+
 	private int clickedGrid = 10;
-	
-	
- 
+
 	IO_manager io_manager;
 	Comission_manager co_manager;
-	Money_manager mo_manager;
-	
-	
+	Money_manager mo_manager = new Money_manager();
+	Goods_manager go_manager = new Goods_manager();
 
 //	#########################################
 //	#										#
 //	#########################################
 
 	public void initialize() {
-
+		start_ap.setVisible(true);
 	}
-	
+
 	private void initialize_co_man() {
 		co_manager = new Comission_manager(io_manager.getComissionsList());
 	}
@@ -327,23 +332,38 @@ public class Controller {
 		Stage t = (Stage) btn_load_csv.getScene().getWindow();
 		File selectedFile = fileChooser.showOpenDialog(t);
 		String csv_path = selectedFile.getAbsolutePath().toString();
-		System.out.print(csv_path);		
-		
+
 		io_manager = new IO_manager(csv_path);
-		
+
 		initialize_co_man();
-		
+
 		start_ap.setDisable(true);
 		start_ap.setVisible(false);
-		
+
 	}
+
 	public void standart_csv() {
 		io_manager = new IO_manager();
-		
+
 		initialize_co_man();
-		
+
 		start_ap.setDisable(true);
 		start_ap.setVisible(false);
-		
+
+	}
+
+	public void openDialog(ActionEvent event) {
+		FXMLLoader loader = new FXMLLoader();
+		try {
+			Pane pane = loader.load(getClass().getResource("bilanzDialog.fxml").openStream());
+			Stage stage = new Stage();
+			stage.initModality(Modality.APPLICATION_MODAL);
+			stage.setScene(new Scene(pane));
+			stage.setTitle("Bilanz");
+			stage.getIcons().add(new Image(ImageLocation.class.getResource("paper_placeholder.png").toExternalForm()));
+			stage.show();
+		} catch (IOException e) {
+			System.out.println(e.toString());
+		}
 	}
 }

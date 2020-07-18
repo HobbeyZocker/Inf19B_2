@@ -1,7 +1,7 @@
 package inf19b_2.managers;
 
 import java.util.concurrent.TimeUnit;
-import inf19b_2.UI.textures.ImageLocation;
+import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.UI.Controller;
 
 public class Game_manager {

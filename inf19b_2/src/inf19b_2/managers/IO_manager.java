@@ -16,8 +16,7 @@ public class IO_manager {
 	private ArrayList<String[]> comission = new ArrayList<String[]>();
 
 	public IO_manager() {
-		File file = new File("src/inf19b_2/main/Leistungsnachweis.csv");
-		System.out.println("Path : " + file.getAbsolutePath());
+		File file = new File("src/inf19b_2/resources/Leistungsnachweis.csv");
 
 		readCSV((String) file.getAbsolutePath());
 	}

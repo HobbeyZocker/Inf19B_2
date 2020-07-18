@@ -1,6 +1,6 @@
 package inf19b_2.main;
 
-import inf19b_2.UI.textures.ImageLocation;
+import inf19b_2.resources.textures.ImageLocation;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +16,7 @@ public class Start extends Application {
 		primaryStage.setTitle("Lager Logistik");
 		primaryStage.setScene(new Scene(root, 1250, 700));
 		primaryStage.getIcons().add(new Image(ImageLocation.class.getResource("paper_placeholder.png").toExternalForm()));
+		primaryStage.setResizable(false);
 		primaryStage.show();
 	}
 

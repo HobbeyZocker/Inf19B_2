@@ -1,19 +1,24 @@
 package inf19b_2.UI;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.scene.*;
 import javafx.scene.control.Button;
-import javafx.stage.FileChooser;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
-import java.io.File;
 import java.io.IOException;
 
 public class startScreenController {
 
 	@FXML
 	private Button btn_switch;
+
+	@FXML
+	private Label label_one;
 
 	@FXML
 	public void Start() {
@@ -25,7 +30,24 @@ public class startScreenController {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+
 		}
 	}
+
+	public void initialize() {
+		flasher.setCycleCount(Animation.INDEFINITE);
+		flasher.play();
+	}
+
+	Timeline flasher = new Timeline(
+
+			new KeyFrame(Duration.seconds(0.5), e -> {
+				label_one.setVisible(true);
+			}),
+
+			new KeyFrame(Duration.seconds(1.5), e -> {
+				label_one.setVisible(false);
+
+			}));
 
 }
