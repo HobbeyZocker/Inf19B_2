@@ -12,16 +12,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="700.0" maxWidth="1250.0"
-	minHeight="700.0" minWidth="1250.0" prefHeight="700.0"
-	prefWidth="1250.0" style="-fx-background-color: dedede;"
-	xmlns="http://javafx.com/javafx/11.0.1"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="inf19b_2.UI.Controller">
+<AnchorPane maxHeight="700.0" maxWidth="1250.0" minHeight="700.0" minWidth="1250.0" prefHeight="700.0" prefWidth="1250.0" style="-fx-background-color: dedede;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.Controller">
 	<children>
-		<AnchorPane prefHeight="30.0" prefWidth="1250.0"
-			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-			AnchorPane.topAnchor="5.0">
+		<AnchorPane prefHeight="30.0" prefWidth="1250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
 			<children>
 				<Pane layoutX="50.0">
 					<children>
@@ -57,9 +50,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Button fx:id="btn_bilanz" layoutY="2.0"
-							mnemonicParsing="false" onAction="#openDialog" prefHeight="25.0"
-							prefWidth="100.0" text="Bilanz" />
+						<Button fx:id="btn_bilanz" layoutY="2.0" mnemonicParsing="false" onAction="#openDialog" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
 					</children>
 				</Pane>
 				<Pane AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
@@ -92,9 +83,7 @@
 				</Pane>
 			</children>
 		</AnchorPane>
-		<Pane layoutX="10.0" layoutY="10.0"
-			style="-fx-background-color: #0f0f0f;" AnchorPane.bottomAnchor="0.0"
-			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+		<Pane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #0f0f0f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<children>
 				<Label layoutX="1100.0" text="© Anton Reuter" textFill="WHITE">
 					<padding>
@@ -106,28 +95,18 @@
 				</Label>
 			</children>
 		</Pane>
-		<AnchorPane minHeight="0.0" minWidth="0.0"
-			prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0"
-			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
 			<children>
 				<AnchorPane prefHeight="200.0" prefWidth="200.0">
 					<children>
-						<AnchorPane layoutY="-1.0" prefHeight="73.0"
-							prefWidth="200.0" style="-fx-border-color: black;"
-							AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+						<AnchorPane layoutY="-1.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
 							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER"
-									layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0"
-									text="TEST" AnchorPane.leftAnchor="0.0"
-									AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
+								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
 									<font>
 										<Font name="Zero Threes" size="29.0" />
 									</font>
 								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0"
-									prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn"
-									AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0"
-									AnchorPane.rightAnchor="50.0">
+								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="50.0">
 									<font>
 										<Font name="Zero Threes" size="9.0" />
 									</font>
@@ -135,12 +114,9 @@
 										<Insets left="2.0" />
 									</padding>
 								</Label>
-								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0"
-									AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
-									AnchorPane.topAnchor="0.0">
+								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 									<children>
-										<ImageView pickOnBounds="true" preserveRatio="true"
-											scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
+										<ImageView pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
 											<image>
 												<Image url="@../resources/textures/decline_button.png" />
 											</image>
@@ -149,23 +125,14 @@
 								</Pane>
 							</children>
 						</AnchorPane>
-						<AnchorPane layoutX="20.0" layoutY="9.0"
-							prefHeight="73.0" prefWidth="200.0"
-							style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0"
-							AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+						<AnchorPane layoutX="20.0" layoutY="9.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
 							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER"
-									layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0"
-									text="TEST" AnchorPane.leftAnchor="0.0"
-									AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
+								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
 									<font>
 										<Font name="Zero Threes" size="29.0" />
 									</font>
 								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0"
-									prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn"
-									AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0"
-									AnchorPane.rightAnchor="50.0">
+								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="50.0">
 									<font>
 										<Font name="Zero Threes" size="9.0" />
 									</font>
@@ -173,12 +140,9 @@
 										<Insets left="2.0" />
 									</padding>
 								</Label>
-								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0"
-									AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
-									AnchorPane.topAnchor="0.0">
+								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 									<children>
-										<ImageView pickOnBounds="true" preserveRatio="true"
-											scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
+										<ImageView pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
 											<image>
 												<Image url="@../resources/textures/decline_button.png" />
 											</image>
@@ -187,23 +151,14 @@
 								</Pane>
 							</children>
 						</AnchorPane>
-						<AnchorPane layoutX="30.0" layoutY="19.0"
-							prefHeight="73.0" prefWidth="200.0"
-							style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0"
-							AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
+						<AnchorPane layoutX="30.0" layoutY="19.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
 							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER"
-									layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0"
-									text="TEST" AnchorPane.leftAnchor="0.0"
-									AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
+								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
 									<font>
 										<Font name="Zero Threes" size="29.0" />
 									</font>
 								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0"
-									prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn"
-									AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0"
-									AnchorPane.rightAnchor="50.0">
+								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="50.0">
 									<font>
 										<Font name="Zero Threes" size="9.0" />
 									</font>
@@ -211,12 +166,9 @@
 										<Insets left="2.0" />
 									</padding>
 								</Label>
-								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0"
-									AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
-									AnchorPane.topAnchor="0.0">
+								<Pane layoutY="2.0" prefHeight="70.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 									<children>
-										<ImageView pickOnBounds="true" preserveRatio="true"
-											scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
+										<ImageView pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.4" x="12.0" y="27.0">
 											<image>
 												<Image url="@../resources/textures/decline_button.png" />
 											</image>
@@ -227,484 +179,295 @@
 						</AnchorPane>
 					</children>
 				</AnchorPane>
-				<AnchorPane prefHeight="262.0" prefWidth="200.0"
-					AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-					AnchorPane.topAnchor="240.0">
+				<AnchorPane prefHeight="262.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
 					<children>
-						<Button fx:id="btn_accept" mnemonicParsing="false"
-							onAction="#btnAccept" text="Annehmen" textAlignment="CENTER"
-							AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+						<Button fx:id="btn_accept" mnemonicParsing="false" onAction="#btnAccept" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
 							<font>
 								<Font size="13.0" />
 							</font>
 						</Button>
-						<Button fx:id="btn_reject" mnemonicParsing="false"
-							onAction="#btnDecline" text="Ablehnen"
-							AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-						<Button fx:id="btw_next_cont" layoutY="45.0"
-							mnemonicParsing="false" onAction="#btnNewCom" prefWidth="140.0"
-							text="Nächster Auftrag" AnchorPane.leftAnchor="10.0"
-							AnchorPane.rightAnchor="10.0" />
-						<Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0"
-							mnemonicParsing="false" onAction="#btnMove" text="Objekt Bewegen"
-							AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-						<Button fx:id="btw_destroy_obj" layoutX="20.0"
-							layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy"
-							text="Objekt Zerstören" AnchorPane.leftAnchor="10.0"
-							AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+						<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" onAction="#btnNewCom" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnMove" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 					</children>
 				</AnchorPane>
 			</children>
 		</AnchorPane>
-		<AnchorPane prefHeight="200.0" prefWidth="200.0"
-			AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0"
-			AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
+		<AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
 			<children>
-				<ImageView fitHeight="630.0" fitWidth="1039.0"
-					pickOnBounds="true" smooth="true" AnchorPane.topAnchor="10.0">
+				<ImageView fitHeight="630.0" fitWidth="1039.0" pickOnBounds="true" smooth="true" AnchorPane.topAnchor="10.0">
 					<image>
 						<Image url="@../resources/textures/background.png" />
 					</image>
 				</ImageView>
-				<GridPane prefHeight="650.0" prefWidth="1040.0"
-					AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0"
-					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<GridPane prefHeight="650.0" prefWidth="1040.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<columnConstraints>
-						<ColumnConstraints hgrow="SOMETIMES"
-							minWidth="10.0" prefWidth="100.0" />
-						<ColumnConstraints hgrow="SOMETIMES"
-							minWidth="10.0" prefWidth="100.0" />
-						<ColumnConstraints hgrow="SOMETIMES"
-							minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 					</columnConstraints>
 					<rowConstraints>
-						<RowConstraints minHeight="10.0" prefHeight="30.0"
-							vgrow="SOMETIMES" />
-						<RowConstraints minHeight="10.0" prefHeight="30.0"
-							vgrow="SOMETIMES" />
-						<RowConstraints minHeight="10.0" prefHeight="30.0"
-							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 					</rowConstraints>
 					<children>
-						<AnchorPane fx:id="grid_one"
-							onMouseClicked="#gridOneClicked" prefHeight="200.0"
-							prefWidth="200.0">
+						<AnchorPane fx:id="grid_one" onMouseClicked="#gridOneClicked" prefHeight="200.0" prefWidth="200.0">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_one_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="92.0" layoutY="-39.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_one_frame" fitHeight="167.0" fitWidth="167.0" layoutX="92.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_one_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#oneHoverOn"
-									onMouseExited="#oneHoverOff" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_one_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#oneHoverOn" onMouseExited="#oneHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_four" layoutX="10.0"
-							layoutY="10.0" onMouseClicked="#gridFourClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+						<AnchorPane fx:id="grid_four" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridFourClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_four_frame" fitHeight="167.0"
-									fitWidth="167.0" pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_four_frame" fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_four_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#fourHoverOn"
-									onMouseExited="#fourHoverOff" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_four_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#fourHoverOn" onMouseExited="#fourHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_seven" layoutX="357.0"
-							layoutY="10.0" onMouseClicked="#gridSevenClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+						<AnchorPane fx:id="grid_seven" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridSevenClicked" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_seven_frame" fitHeight="167.0"
-									fitWidth="167.0" pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_seven_frame" fitHeight="167.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_seven_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#sevenHoverOn"
-									onMouseExited="#sevenHoverOff" opacity="0.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fx:id="grid_seven_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#sevenHoverOn" onMouseExited="#sevenHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_two" layoutX="10.0"
-							layoutY="10.0" onMouseClicked="#gridTwoClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+						<AnchorPane fx:id="grid_two" layoutX="10.0" layoutY="10.0" onMouseClicked="#gridTwoClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_two_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_two_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_two_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#twoHoverOn"
-									onMouseExited="#twoHoverOff" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_two_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#twoHoverOn" onMouseExited="#twoHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_five" layoutX="10.0"
-							layoutY="227.0" onMouseClicked="#gridFiveClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-							GridPane.rowIndex="1">
+						<AnchorPane fx:id="grid_five" layoutX="10.0" layoutY="227.0" onMouseClicked="#gridFiveClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_five_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_five_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_five_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#fiveHoverOn"
-									onMouseExited="#fiveHoverOff" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_five_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#fiveHoverOn" onMouseExited="#fiveHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_eight" layoutX="10.0"
-							layoutY="444.0" onMouseClicked="#gridEightClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-							GridPane.rowIndex="2">
+						<AnchorPane fx:id="grid_eight" layoutX="10.0" layoutY="444.0" onMouseClicked="#gridEightClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_eight_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_eight_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_eight_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#eightHoverOn"
-									onMouseExited="#eightHoverOff" opacity="0.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fx:id="grid_eight_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#eightHoverOn" onMouseExited="#eightHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_three" layoutX="357.0"
-							layoutY="10.0" onMouseClicked="#gridThreeClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+						<AnchorPane fx:id="grid_three" layoutX="357.0" layoutY="10.0" onMouseClicked="#gridThreeClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_three_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_three_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_three_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#threeHoverOn"
-									onMouseExited="#threeHoverOff" opacity="0.0"
-									pickOnBounds="true" preserveRatio="true">
+								<ImageView fx:id="grid_three_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#threeHoverOn" onMouseExited="#threeHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_six" layoutX="357.0"
-							layoutY="227.0" onMouseClicked="#gridSixClicked"
-							onMouseEntered="#sixHoverOn" onMouseExited="#sixHoverOff"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2"
-							GridPane.rowIndex="1">
+						<AnchorPane fx:id="grid_six" layoutX="357.0" layoutY="227.0" onMouseClicked="#gridSixClicked" onMouseEntered="#sixHoverOn" onMouseExited="#sixHoverOff" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_six_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_six_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_six_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_six_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
 								</ImageView>
 							</children>
 						</AnchorPane>
-						<AnchorPane fx:id="grid_nine" layoutX="357.0"
-							layoutY="444.0" onMouseClicked="#gridNineClicked"
-							prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2"
-							GridPane.rowIndex="2">
+						<AnchorPane fx:id="grid_nine" layoutX="357.0" layoutY="444.0" onMouseClicked="#gridNineClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
 							<children>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="39.0">
 									<image>
-										<Image
-											url="@../resources/textures/stone_placeholder.png" />
+										<Image url="@../resources/textures/stone_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="134.0" layoutY="69.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="134.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/wood_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fitHeight="100.0" fitWidth="100.0"
-									layoutX="10.0" layoutY="10.0" pickOnBounds="true"
-									preserveRatio="true" AnchorPane.leftAnchor="99.0"
-									AnchorPane.topAnchor="104.0">
+								<ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="104.0">
 									<image>
-										<Image
-											url="@../resources/textures/paper_placeholder.png" />
+										<Image url="@../resources/textures/paper_placeholder.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_nine_frame" fitHeight="167.0"
-									fitWidth="167.0" layoutX="10.0" layoutY="10.0"
-									pickOnBounds="true" preserveRatio="true"
-									AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
+								<ImageView fx:id="grid_nine_frame" fitHeight="167.0" fitWidth="167.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="39.0">
 									<image>
 										<Image url="@../resources/textures/ramen_schwarz.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="grid_nine_frame_hover"
-									fitHeight="167.0" fitWidth="167.0" layoutX="99.0"
-									layoutY="39.0" onMouseEntered="#nineHoverOn"
-									onMouseExited="#nineHoverOff" opacity="0.0" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="grid_nine_frame_hover" fitHeight="167.0" fitWidth="167.0" layoutX="99.0" layoutY="39.0" onMouseEntered="#nineHoverOn" onMouseExited="#nineHoverOff" opacity="0.0" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@../resources/textures/ramen_blau.png" />
 									</image>
@@ -715,31 +478,17 @@
 				</GridPane>
 			</children>
 		</AnchorPane>
-		<AnchorPane fx:id="start_ap" prefHeight="700.0"
-			prefWidth="1250.0" visible="false" AnchorPane.bottomAnchor="0.0"
-			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-			AnchorPane.topAnchor="0.0">
+		<AnchorPane fx:id="start_ap" prefHeight="700.0" prefWidth="1250.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<children>
 				<ImageView pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../resources/textures/unscharf.png" />
 					</image>
 				</ImageView>
-				<AnchorPane prefHeight="200.0" prefWidth="250.0"
-					style="-fx-background-color: #DEDEDE; -fx-border-color: black;"
-					AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="250.0">
+				<AnchorPane prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #DEDEDE; -fx-border-color: black;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="250.0">
 					<children>
-						<Button fx:id="btn_load_csv" mnemonicParsing="false"
-							onAction="#load_csv" prefHeight="67.0" prefWidth="230.0"
-							text="Lade CSV Datei" textAlignment="CENTER"
-							AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
-							AnchorPane.topAnchor="25.0" />
-						<Button layoutX="10.0" layoutY="10.0"
-							mnemonicParsing="false" onAction="#standart_csv"
-							prefHeight="67.0" prefWidth="230.0"
-							text="Benutze die standart CSV Datei"
-							AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="10.0"
-							AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btn_load_csv" mnemonicParsing="false" onAction="#load_csv" prefHeight="67.0" prefWidth="230.0" text="Lade CSV Datei" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+						<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#standart_csv" prefHeight="67.0" prefWidth="230.0" text="Benutze die standart CSV Datei" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 					</children>
 				</AnchorPane>
 			</children>
