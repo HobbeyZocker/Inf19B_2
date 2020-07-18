@@ -1,27 +1,34 @@
 package inf19b_2.managers;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class IO_manager {
 
-	private String csvFile = "C:\\Users\\AntonFelixReuterAwes\\git\\Inf19B_2\\Leistungsnachweis.csv";
 	private String line = "";
 	private String cvsSplitBy = ";";
-	
+
 	private int clickedGrid = 10;
-	
 
 	private ArrayList<String[]> comission = new ArrayList<String[]>();
 
-	public void readCSV(String csvPath) {
+	public IO_manager() {
+		File file = new File("src/inf19b_2/main/Leistungsnachweis.csv");
+		System.out.println("Path : " + file.getAbsolutePath());
 
-		if (csvPath != null)
-			csvFile = csvPath;
+		readCSV((String) file.getAbsolutePath());
+	}
 
-		try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+	public IO_manager(String csv_path) {
+		readCSV(csv_path);
+	}
+
+	private void readCSV(String csvPath) {
+
+		try (BufferedReader br = new BufferedReader(new FileReader(csvPath))) {
 
 			while ((line = br.readLine()) != null) {
 
@@ -43,17 +50,15 @@ public class IO_manager {
 	public ArrayList<String[]> getComissionsList() {
 		return comission;
 	}
-	
-	
-	
+
 	public void setClickedGrid(int clickedGrid) {
 		this.clickedGrid = clickedGrid;
 		System.out.print(this.clickedGrid);
 	}
-	
+
 	public int getClickedGrid() {
 		if (clickedGrid < 9) {
-			
+
 			int temp = clickedGrid;
 //			clickedGrid = 10;
 			System.out.print(temp);
@@ -61,7 +66,5 @@ public class IO_manager {
 		} else
 			return 10;
 	}
-
-
 
 }

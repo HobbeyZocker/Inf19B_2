@@ -24,6 +24,8 @@ public class Start extends Application {
 		Application.launch(args);
 
 	}
+	
+	
 
 }// --module-path C:\Users\Anton\eclipse\javafx-sdk-14.0.1\lib --add-modules
 	// javafx.controls,javafx.fxml

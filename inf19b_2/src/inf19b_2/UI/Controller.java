@@ -1,15 +1,20 @@
 package inf19b_2.UI;
 
-
+import java.io.File;
 import inf19b_2.UI.textures.ImageLocation;
+import inf19b_2.managers.Comission_manager;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.IO_manager;
+import inf19b_2.managers.Money_manager;
 import javafx.scene.image.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 
 public class Controller {
-	
+
 //	#########################################
 //	#			Declaration					#
 //	#########################################
@@ -47,6 +52,8 @@ public class Controller {
 	private Button btw_move_obj;
 	@FXML
 	private Button btw_destroy_obj;
+	@FXML
+	private Button btn_load_csv;
 //
 	@FXML
 	private ImageView grid_one_frame_hover;
@@ -67,23 +74,35 @@ public class Controller {
 	@FXML
 	private ImageView grid_nine_frame_hover;
 
-
+	@FXML
+	private AnchorPane start_ap;
+	
 	private int clickedGrid = 10;
 	
-	IO_manager io_manager = new IO_manager();
+	
+ 
+	IO_manager io_manager;
+	Comission_manager co_manager;
+	Money_manager mo_manager;
+	
+	
 
 //	#########################################
 //	#										#
 //	#########################################
-	
+
 	public void initialize() {
 
+	}
+	
+	private void initialize_co_man() {
+		co_manager = new Comission_manager(io_manager.getComissionsList());
 	}
 
 //	#########################################
 //	#			Click on grid				#
 //	#########################################
-	
+
 	public void gridOneClicked() {
 		System.out.println("test1");
 		this.clickedGrid = 0;
@@ -301,4 +320,30 @@ public class Controller {
 //		xxx
 	}
 
+	public void load_csv() {
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Wähle deine CSV Datei");
+		fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV Datei", "*.csv"));
+		Stage t = (Stage) btn_load_csv.getScene().getWindow();
+		File selectedFile = fileChooser.showOpenDialog(t);
+		String csv_path = selectedFile.getAbsolutePath().toString();
+		System.out.print(csv_path);		
+		
+		io_manager = new IO_manager(csv_path);
+		
+		initialize_co_man();
+		
+		start_ap.setDisable(true);
+		start_ap.setVisible(false);
+		
+	}
+	public void standart_csv() {
+		io_manager = new IO_manager();
+		
+		initialize_co_man();
+		
+		start_ap.setDisable(true);
+		start_ap.setVisible(false);
+		
+	}
 }

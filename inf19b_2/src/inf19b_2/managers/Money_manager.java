@@ -29,7 +29,7 @@ public class Money_manager {
 		expenses += money;
 	}
 
-	public void addBooking(int money, String type) {						//get called for action made
+	public void addBooking(int money, String type) throws Exception {						//get called for action made
 		switch (type) {
 
 		case "in":															//every booking where you make money
@@ -45,7 +45,7 @@ public class Money_manager {
 			break;
 
 		default:
-			throw new RuntimeException("Wrong type used, Money_manager");									//excption for when the type is wrong, shouldn't happen tho
+			throw new Exception("Wrong type used, Money_manager");									//excption for when the type is wrong, shouldn't happen tho
 
 		}
 

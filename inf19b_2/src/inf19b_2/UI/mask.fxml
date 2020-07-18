@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.Controller">
+<AnchorPane fx:id="main_ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inf19b_2.UI.Controller">
 	<children>
       <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0">
          <children>
@@ -70,7 +70,6 @@
 						<Insets bottom="5.0" left="50.0" right="5.0" />
 					</padding>
 				</Label>
-				<Button alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="190.0" layoutY="-5.0" lineSpacing="1.0" mnemonicParsing="false" scaleX="0.6" scaleY="0.5" scaleZ="0.5" text="Impressum" textAlignment="CENTER" />
 			</children>
 		</Pane>
 						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -370,5 +369,11 @@
 				</GridPane>
 			</children>
 		</AnchorPane>
+      <AnchorPane fx:id="start_ap" layoutX="500.0" layoutY="250.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #DEDEDE; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btn_load_csv" mnemonicParsing="false" onAction="#load_csv" prefHeight="67.0" prefWidth="230.0" text="Lade CSV Datei" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#standart_csv" prefHeight="67.0" prefWidth="230.0" text="Benutze die includierte CSV Datei" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+         </children>
+      </AnchorPane>
 	</children>
 </AnchorPane>
