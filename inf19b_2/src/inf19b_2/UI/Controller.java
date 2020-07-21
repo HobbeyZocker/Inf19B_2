@@ -352,7 +352,7 @@ public class Controller {
 
 	}
 
-	public void openDialog(ActionEvent event) {
+	public void openBilanz(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
 		try {
 			Pane pane = loader.load(getClass().getResource("bilanzDialog.fxml").openStream());
