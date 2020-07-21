@@ -50,7 +50,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Button fx:id="btn_bilanz" layoutY="2.0" mnemonicParsing="false" onAction="#openDialog" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
+						<Button fx:id="btn_bilanz" layoutY="2.0" mnemonicParsing="false" onAction="#openBilanz" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
 					</children>
 				</Pane>
 				<Pane AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">

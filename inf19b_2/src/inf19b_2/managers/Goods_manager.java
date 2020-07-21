@@ -20,7 +20,6 @@ public class Goods_manager {
 	private ArrayList<Stack<Object>> stacks = new ArrayList<Stack<Object>>();
 
 	public Goods_manager() {
-
 		stacks.add(one);
 		stacks.add(two);
 		stacks.add(three);
@@ -32,57 +31,66 @@ public class Goods_manager {
 		stacks.add(nine);
 	}
 
-//	obsolet?
-	public boolean contains(Object obj, Stack<Object> stack) {
-		return stack.contains(obj);
-
-	}
 //	#########################################################
 
+//	#########################################
+//	#		Looks for space on stack		#
+//	#########################################
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-		return (3 - stack.size() < sizeNeeded);
+		return (3 - stack.size()  >= sizeNeeded);
 	}
 //	#########################################################
 
-//	PushPaper
-	private void pushPaperAndWood(Object obj) {
+//	#########################################
+//	#  Push Paper, Stone and Wood on Stack  #
+//	#########################################
+	private boolean[] checkPushPWS(Object obj) {
 		boolean stackNum[] = new boolean[9];
-		int call = 1; // placeholder
 
 		for (int i = 0; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
-		// call = game_manager.xx(stackNum) get num zurück
-		stacks.get(call).push(obj);
-	}
-//	#########################################################
+		return stackNum;
 
-//	PushStone
-	private void pushStone(Object obj) {
+//		stacks.get(call).push(obj);
+	}
+//	##########################################
+
+//	#########################################
+//	#		Push Stone on to Stack			#
+//	#########################################
+	private boolean[] checkPushHeavyStone(Object obj) {
 		boolean stackNum[] = new boolean[9];
-		int call = 7; // placeholder
 
 		for (int i = 6; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
 		// call = game_manager.xx(stackNum) get num zurück
-		stacks.get(call).push(obj);
+
+		return stackNum;
+
+//		stacks.get(call).push(obj);
 	}
-//	#########################################################
+//	#########################################
 
-//	PushWood
-	private void pushWoodedBeams(Object obj) {
+//	#########################################
+//	#		Push Wood Beams on to Stack		#
+//	#########################################
+	private boolean[] checkPushWoodedBeams(Object obj) {
 		boolean stackNum[] = new boolean[9];
-		int call = 1; // placeholder
-
+		
 		for (int i = 0; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(3, stacks.get(i));
 		}
-		// call = game_manager.xx(stackNum) get num zurück
-		stacks.get(call).push(obj);
-	}
-//	#########################################################
+		return stackNum;
 
+//		stacks.get(call).push(obj);
+	}
+//	##########################################
+
+//	#########################################
+//	#		Pop Paper from Stack			#
+//	#########################################
 	private void popPaper(Object objImp) {
 		boolean stackNum[][] = new boolean[9][4];
 		int call = 1; // placeholder
@@ -101,18 +109,27 @@ public class Goods_manager {
 		// call = game_manager.xx(stackNum) get num zurück
 		stacks.get(call).pop();
 	}
-//	#########################################################
+//	#########################################
 
+//	#########################################
+//	#		Pop Stone from Stack			#
+//	#########################################
 	private void popStone(Object obj) {
 
 	}
-//	#########################################################
+//	#########################################
 
+//	#########################################
+//	#		Pop Wood from Stack			#
+//	#########################################
 	private void popWood(Object obj) {
 
 	}
-//	#########################################################
+//	#########################################
 
+//	#########################################
+//	#			Pop main method				#
+//	#########################################
 	public void popObj(Object objImp) {
 		good compareObj = (good) objImp;
 
@@ -126,10 +143,10 @@ public class Goods_manager {
 			System.out.println("holz klappt");
 
 			break;
-			
+
 		case 'b':
 			System.out.println("holz klappt");
-			
+
 			break;
 
 		case 'p':
@@ -142,55 +159,72 @@ public class Goods_manager {
 		}
 
 	}
-//	#########################################################
+//	##########################################
 
-	public void pushObj(Object objImp) {
-
+//	#########################################
+//	#			push main method			#
+//	#########################################
+	public void pushObj(Object objImp) throws Exception {
 		good obj = (good) objImp;
 
-		switch (obj.name) {
+		switch (obj.name) {//
+		case 'h':
+			System.out.println("stein klappt");
+//			pushPWS(obj);
+			break;
+
 		case 's':
 			System.out.println("stein klappt");
-			pushStone(obj);
+//			pushHeavyStone(obj);
 			break;
 
 		case 'b':
 			System.out.println("holz klappt");
-			pushWoodedBeams(obj);
+//			pushWoodedBeams(obj);
 			break;
 
 		case 'w':
 			System.out.println("papier klappt");
-			pushPaperAndWood(obj);
+//			pushPWS(obj);
 			break;
-			
+
 		case 'p':
 			System.out.println("papier klappt");
-			pushPaperAndWood(obj);
+//			pushPWS(obj);
 			break;
 
 		default:
-			throw new RuntimeException("Object not allowed");
+			throw new Exception("Object not allowed");
 		}
-
 	}
-//	#########################################################
+//	###########################################
 
-//	public void
+//	#########################################
+//	#			push main method			#
+//	#########################################
+	public boolean[] checkPushObj(Object objImp) {
 
-	// var[][] Lager = new Lager[3][3]
+		good obj = (good) objImp;
 
-	/*
-	 * 
-	 * 
-	 * 
-	 * Arten: Papier ( farbe: weiß, grün, blau ; größe: a3, a4, a5 ; special: /)
-	 * Holz ( typ: kiefer, buche, eiche ; form: brett, balken, scheit; special:
-	 * 1x1x3) Stein ( typ: mamor, granit, sandstein ; gewicht: klein, mittel, groß
-	 * special: nur unten lagern)
-	 * 
-	 * 
-	 * 
-	 */
+		switch (obj.name) {
+		case 'h':
+		case 'p':
+		case 'w':
+			System.out.println("stein klappt");
+			return checkPushPWS(obj);
+
+		case 's':
+			System.out.println("stein klappt");
+			return checkPushHeavyStone(obj);
+
+		case 'b':
+			System.out.println("holz klappt");
+			return checkPushWoodedBeams(obj);
+
+		default:
+			return null;
+		}
+	}
+//	###########################################
 
 }

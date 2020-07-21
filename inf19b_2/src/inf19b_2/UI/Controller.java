@@ -2,8 +2,10 @@ package inf19b_2.UI;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 import inf19b_2.resources.textures.ImageLocation;
+import inf19b_2.goods.Paper;
 import inf19b_2.managers.Comission_manager;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.Goods_manager;
@@ -86,6 +88,8 @@ public class Controller {
 	private AnchorPane start_ap;
 
 	private int clickedGrid = 10;
+	private int choosenCommission = 0;
+	
 
 	IO_manager io_manager;
 	Comission_manager co_manager;
@@ -303,6 +307,14 @@ public class Controller {
 
 	public void btnAccept() {
 		setAllFramesBlack();
+		
+		
+		//muss in auftrag auswählen
+		
+		setSomeFramesGreen(go_manager.checkPushObj(new Paper("blau","a4")));
+		
+		
+		
 	}
 
 	public void btnDecline() {

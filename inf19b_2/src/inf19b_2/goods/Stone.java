@@ -5,7 +5,6 @@ public class Stone extends good {
 	private String type, weight;
 
 	public Stone(String type, String weight) {
-		super.name = 's';
 
 		if (type.equalsIgnoreCase("mamor") || type.equalsIgnoreCase("granit") || type.equalsIgnoreCase("sandstein"))
 			this.type = type.toLowerCase();
@@ -16,6 +15,11 @@ public class Stone extends good {
 			this.weight = weight.toLowerCase();
 		else
 			throw new RuntimeException("Falsches Stein Gewicht");
+
+		if (weight == "schwer")
+			super.name = 'h';
+		else
+			super.name = 'h';
 	}
 
 	public String getType() {
