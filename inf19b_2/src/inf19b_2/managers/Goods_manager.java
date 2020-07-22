@@ -207,13 +207,13 @@ public class Goods_manager {
 		good obj = (good) objImp;
 
 		switch (obj.name) {
-		case 'h':
+		case 's':
 		case 'p':
 		case 'w':
 			System.out.println("stein klappt");
 			return checkPushPWS(obj);
 
-		case 's':
+		case 'h':
 			System.out.println("stein klappt");
 			return checkPushHeavyStone(obj);
 

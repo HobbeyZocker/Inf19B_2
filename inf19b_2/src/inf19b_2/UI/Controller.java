@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.goods.Paper;
-import inf19b_2.managers.Comission_manager;
+import inf19b_2.goods.Stone;
+import inf19b_2.managers.Commission_manager;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.Goods_manager;
 import inf19b_2.managers.IO_manager;
@@ -92,7 +93,7 @@ public class Controller {
 	
 
 	IO_manager io_manager;
-	Comission_manager co_manager;
+	Commission_manager co_manager;
 	Money_manager mo_manager = new Money_manager();
 	Goods_manager go_manager = new Goods_manager();
 
@@ -105,7 +106,7 @@ public class Controller {
 	}
 
 	private void initialize_co_man() {
-		co_manager = new Comission_manager(io_manager.getComissionsList());
+		co_manager = new Commission_manager(io_manager.getComissionsList());
 	}
 
 //	#########################################
@@ -311,7 +312,10 @@ public class Controller {
 		
 		//muss in auftrag auswählen
 		
-		setSomeFramesGreen(go_manager.checkPushObj(new Paper("blau","a4")));
+//		setSomeFramesGreen(go_manager.checkPushObj(new Paper("blau","a4")));
+//		setSomeFramesGreen(go_manager.checkPushObj(new Stone("mamor","leicht")));
+		setSomeFramesGreen(go_manager.checkPushObj(new Stone("mamor","schwer")));
+		System.out.print(Arrays.toString(go_manager.checkPushObj(new Stone("mamor","schwer"))));
 		
 		
 		
@@ -322,7 +326,7 @@ public class Controller {
 	}
 
 	public void btnNewCom() {
-//		xxx
+		System.out.print(Arrays.deepToString(co_manager.getOrder()));
 	}
 
 	public void btnMove() {

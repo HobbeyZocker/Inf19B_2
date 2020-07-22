@@ -19,7 +19,7 @@ public class Stone extends good {
 		if (weight == "schwer")
 			super.name = 'h';
 		else
-			super.name = 'h';
+			super.name = 's';
 	}
 
 	public String getType() {

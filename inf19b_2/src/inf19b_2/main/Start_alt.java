@@ -12,7 +12,7 @@ public class Start_alt {
 	public static void main2(String[] args) {
 
 		IO_manager io_manager = new IO_manager();
-		Comission_manager com_manager = new Comission_manager(io_manager.getComissionsList());
+		Commission_manager com_manager = new Commission_manager(io_manager.getComissionsList());
 		Start ui_start = new Start();
 		Game_manager game_manager = new Game_manager();
 
