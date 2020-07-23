@@ -26,7 +26,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label layoutX="400.0" text="1500 €">
+						<Label fx:id="label_money" layoutX="400.0" text="1500 €">
 							<padding>
 								<Insets bottom="5.0" right="50.0" top="5.0" />
 							</padding>
@@ -34,7 +34,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label layoutX="470.0" text="+ 200 €" textFill="#33af47">
+						<Label fx:id="label_money_plus" layoutX="470.0" text="+ 200 €" textFill="#33af47">
 							<padding>
 								<Insets bottom="5.0" right="50.0" top="5.0" />
 							</padding>
@@ -42,7 +42,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label layoutX="470.0" text="- 200 €" textFill="#f84116">
+						<Label fx:id="label_money_minus" layoutX="470.0" text="- 200 €" textFill="#f84116">
 							<padding>
 								<Insets bottom="5.0" left="4.0" right="50.0" top="5.0" />
 							</padding>
@@ -63,7 +63,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label layoutX="150.0" text="2">
+						<Label fx:id="label_free_spots" layoutX="150.0" text="2">
 							<padding>
 								<Insets bottom="5.0" left="10.0" top="5.0" />
 							</padding>
@@ -95,20 +95,31 @@
 				</Label>
 			</children>
 		</Pane>
-		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="228.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
 			<children>
-				<AnchorPane prefHeight="200.0" prefWidth="200.0">
+				<AnchorPane prefHeight="272.0" prefWidth="218.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
 					<children>
-						<AnchorPane layoutY="-1.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                  <Pane layoutX="-1019.0" layoutY="-30.0" onMouseClicked="#uncolorComissions" prefHeight="670.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+						<AnchorPane fx:id="ap_com_one" layoutX="3.0" layoutY="-1.0" onMouseClicked="#commissionClickOne" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+								<Label fx:id="Label_com_one_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
 									<font>
-										<Font name="Zero Threes" size="29.0" />
+										<Font size="25.0" />
 									</font>
 								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
+                        <Label fx:id="Label_com_one_type" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Kiefer" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_one_size" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Bretter" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+								<Label fx:id="Label_com_one_desc" alignment="CENTER" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
 									<font>
-										<Font name="Zero Threes" size="9.0" />
+										<Font size="13.0" />
 									</font>
 									<padding>
 										<Insets left="2.0" />
@@ -116,50 +127,65 @@
 								</Label>
 							</children>
 						</AnchorPane>
-						<AnchorPane layoutX="20.0" layoutY="9.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
-							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
-									<font>
-										<Font name="Zero Threes" size="29.0" />
-									</font>
-								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-									<font>
-										<Font name="Zero Threes" size="9.0" />
-									</font>
-									<padding>
-										<Insets left="2.0" />
-									</padding>
-								</Label>
-							</children>
-						</AnchorPane>
-						<AnchorPane layoutX="30.0" layoutY="19.0" prefHeight="73.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
-							<children>
-								<Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="8.0" prefHeight="44.0" prefWidth="97.0" text="TEST" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
-									<font>
-										<Font name="Zero Threes" size="29.0" />
-									</font>
-								</Label>
-								<Label alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-									<font>
-										<Font name="Zero Threes" size="9.0" />
-									</font>
-									<padding>
-										<Insets left="2.0" />
-									</padding>
-								</Label>
-							</children>
-						</AnchorPane>
+                  <AnchorPane fx:id="ap_com_two" layoutX="10.0" layoutY="9.0" onMouseClicked="#commissionClickTwo" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+                     <children>
+                        <Label fx:id="Label_com_two_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_two_type" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Kiefer" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_two_size" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Bretter" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_two_desc" alignment="CENTER" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ap_com_three" layoutX="10.0" layoutY="100.0" onMouseClicked="#commissionClickThree" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
+                     <children>
+                        <Label fx:id="Label_com_three_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_three_type" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Kiefer" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_three_size" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="3.0" prefHeight="44.0" prefWidth="72.0" text="Bretter" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Label_com_three_desc" alignment="CENTER" layoutY="16.0" prefHeight="23.0" prefWidth="105.0" text="Descriptionnnnnnnn" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
 					</children>
 				</AnchorPane>
-				<AnchorPane prefHeight="262.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
+				<AnchorPane layoutX="-9.0" onMouseClicked="#uncolorComissions" prefHeight="262.0" prefWidth="209.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
 					<children>
-						<Button fx:id="btn_accept" mnemonicParsing="false" onAction="#btnAccept" text="Annehmen" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
-							<font>
-								<Font size="13.0" />
-							</font>
-						</Button>
-						<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" text="Ablehnen" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+						<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" prefHeight="30.0" prefWidth="100.0" text="Ablehnen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
 						<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" onAction="#btnNewCom" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 						<Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnMove" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 						<Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
@@ -167,9 +193,9 @@
 				</AnchorPane>
 			</children>
 		</AnchorPane>
-		<AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
+		<AnchorPane prefHeight="650.0" prefWidth="995.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="30.0">
 			<children>
-				<ImageView fitHeight="630.0" fitWidth="1039.0" pickOnBounds="true" smooth="true" AnchorPane.topAnchor="10.0">
+				<ImageView fitHeight="630.0" fitWidth="1000.0" pickOnBounds="true" smooth="true" AnchorPane.topAnchor="10.0">
 					<image>
 						<Image url="@../resources/textures/background.png" />
 					</image>
@@ -460,8 +486,8 @@
 				</ImageView>
 				<AnchorPane prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #DEDEDE; -fx-border-color: black;" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="250.0">
 					<children>
-						<Button fx:id="btn_load_csv" mnemonicParsing="false" onAction="#load_csv" prefHeight="67.0" prefWidth="230.0" text="Lade CSV Datei" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
-						<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#standart_csv" prefHeight="67.0" prefWidth="230.0" text="Benutze die standart CSV Datei" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btn_load_csv" mnemonicParsing="false" onAction="#btnLoadCsv" prefHeight="67.0" prefWidth="230.0" text="Lade CSV Datei" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+						<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnStandartCsv" prefHeight="67.0" prefWidth="230.0" text="Benutze die standart CSV Datei" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
 					</children>
 				</AnchorPane>
 			</children>

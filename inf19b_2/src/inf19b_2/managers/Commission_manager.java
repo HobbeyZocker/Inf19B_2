@@ -22,4 +22,7 @@ public class Commission_manager {
 		return order;
 	}
 
+	public void orderNumMinus() {
+		orderNum--;
+	}
 }

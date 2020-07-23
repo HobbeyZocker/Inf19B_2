@@ -32,3 +32,5 @@ public class Wood extends good {
 	}
 
 }
+
+
