@@ -708,23 +708,23 @@ public class Controller {
 
 	private void setSomeFramesOrange(boolean[][] stackNum) { // TODO color orange
 		if (stackNum[0][0] == true)
-			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[1][0] == true)
-			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[2][0] == true)
-			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[3][0] == true)
-			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[4][0] == true)
-			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[5][0] == true)
-			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[6][0] == true)
-			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[7][0] == true)
-			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 		if (stackNum[8][0] == true)
-			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_orange.png").toExternalForm()));
 	}
 
 	private void setSomeFramesGreen(boolean[][] stackNum) { // TODO
