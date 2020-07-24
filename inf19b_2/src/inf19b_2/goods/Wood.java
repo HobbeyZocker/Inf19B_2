@@ -1,5 +1,7 @@
 package inf19b_2.goods;
 
+import java.util.Objects;
+
 public class Wood extends good {
 
 	private String type, form;
@@ -16,7 +18,7 @@ public class Wood extends good {
 		else
 			throw new RuntimeException("Falsches Stein Gewicht");
 
-		if (this.form == "balken")
+		if (Objects.equals(this.form, "balken"))
 			super.name = 'b';
 		else
 			super.name = 'w';

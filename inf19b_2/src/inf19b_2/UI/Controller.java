@@ -3,10 +3,13 @@ package inf19b_2.UI;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Objects;
 
 import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.goods.Paper;
 import inf19b_2.goods.Stone;
+import inf19b_2.goods.Wood;
+import inf19b_2.goods.good;
 import inf19b_2.managers.Commission_manager;
 import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.Goods_manager;
@@ -15,6 +18,7 @@ import inf19b_2.managers.Money_manager;
 import javafx.scene.image.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -183,9 +187,7 @@ public class Controller {
 	@FXML
 	private Label label_money;
 	@FXML
-	private Label label_money_minus;
-	@FXML
-	private Label label_money_plus;
+	private Label label_money_change;
 
 	// Main anchor pane
 	@FXML
@@ -199,7 +201,6 @@ public class Controller {
 	private AnchorPane ap_com_three;
 
 	private int clickedGrid = 10;
-	private int choosenCommission = 0;
 
 	// Arrays which contain the Commission
 	private String[] comOne;
@@ -207,6 +208,20 @@ public class Controller {
 	private String[] comThree;
 	private int activeComission;
 	private boolean[] comSpotTaken = new boolean[3];
+	private boolean[] validStacks = new boolean[9];
+	private boolean[][] validStacksTwo = new boolean[9][4];
+
+	// goods = TODO obsolete?
+	Stone s;
+	Paper p;
+	Wood w;
+
+	// destroy
+	private boolean destroyGood;
+
+	// move
+	private int moveGood;
+	private int moveFrom;
 
 	// managers
 	IO_manager io_manager;
@@ -231,50 +246,39 @@ public class Controller {
 //	#########################################
 
 	public void gridOneClicked() {
-		System.out.println("test1");
-		this.clickedGrid = 0;
-		
+		gridClickAction(0);
 	}
 
 	public void gridTwoClicked() {
-		System.out.println("test2");
-		this.clickedGrid = 1;
+		gridClickAction(1);
 	}
 
 	public void gridThreeClicked() {
-		System.out.println("test3");
-		this.clickedGrid = 2;
+		gridClickAction(2);
 	}
 
 	public void gridFourClicked() {
-		System.out.println("test4");
-		this.clickedGrid = 3;
+		gridClickAction(3);
 	}
 
 	public void gridFiveClicked() {
-		System.out.println("test5");
-		this.clickedGrid = 4;
+		gridClickAction(4);
 	}
 
 	public void gridSixClicked() {
-		System.out.println("test6");
-		io_manager.setClickedGrid(5);
-
+		gridClickAction(5);
 	}
 
 	public void gridSevenClicked() {
-		System.out.println("test7");
-		this.clickedGrid = 6;
+		gridClickAction(6);
 	}
 
 	public void gridEightClicked() {
-		System.out.println("test8");
-		this.clickedGrid = 7;
+		gridClickAction(7);
 	}
 
 	public void gridNineClicked() {
-		System.out.println("test9");
-		this.clickedGrid = 8;
+		gridClickAction(8);
 	}
 
 //	#########################################
@@ -282,7 +286,9 @@ public class Controller {
 //	#########################################
 
 	public void oneHoverOn() {
-		grid_one_frame_hover.setOpacity(1);
+		if (clickable(0)) {
+			grid_one_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void oneHoverOff() {
@@ -290,7 +296,9 @@ public class Controller {
 	}
 
 	public void twoHoverOn() {
-		grid_two_frame_hover.setOpacity(1);
+		if (clickable(1)) {
+			grid_two_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void twoHoverOff() {
@@ -298,7 +306,9 @@ public class Controller {
 	}
 
 	public void threeHoverOn() {
-		grid_three_frame_hover.setOpacity(1);
+		if (clickable(2)) {
+			grid_three_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void threeHoverOff() {
@@ -306,7 +316,9 @@ public class Controller {
 	}
 
 	public void fourHoverOn() {
-		grid_four_frame_hover.setOpacity(1);
+		if (clickable(3)) {
+			grid_four_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void fourHoverOff() {
@@ -314,7 +326,9 @@ public class Controller {
 	}
 
 	public void fiveHoverOn() {
-		grid_five_frame_hover.setOpacity(1);
+		if (clickable(4)) {
+			grid_five_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void fiveHoverOff() {
@@ -322,7 +336,9 @@ public class Controller {
 	}
 
 	public void sixHoverOn() {
-		grid_six_frame_hover.setOpacity(1);
+		if (clickable(5)) {
+			grid_six_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void sixHoverOff() {
@@ -330,7 +346,9 @@ public class Controller {
 	}
 
 	public void sevenHoverOn() {
-		grid_seven_frame_hover.setOpacity(1);
+		if (clickable(6)) {
+			grid_seven_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void sevenHoverOff() {
@@ -338,7 +356,9 @@ public class Controller {
 	}
 
 	public void eightHoverOn() {
-		grid_eight_frame_hover.setOpacity(1);
+		if (clickable(7)) {
+			grid_eight_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void eightHoverOff() {
@@ -346,7 +366,9 @@ public class Controller {
 	}
 
 	public void nineHoverOn() {
-		grid_nine_frame_hover.setOpacity(1);
+		if (clickable(8)) {
+			grid_nine_frame_hover.setOpacity(1);
+		}
 	}
 
 	public void nineHoverOff() {
@@ -372,6 +394,7 @@ public class Controller {
 
 	public void setSomeFramesGreen(boolean[] stackNum) {
 		setAllFramesRed();
+		this.validStacks = stackNum;
 		if (stackNum[0] == true)
 			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 		if (stackNum[1] == true)
@@ -392,6 +415,30 @@ public class Controller {
 			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 	}
 
+	private void setSomeFramesGreen(boolean[][] stackNum) {
+		setAllFramesRed();
+		Arrays.fill(validStacks, false);
+		this.validStacksTwo = stackNum;
+		if (stackNum[0][0] == true)
+			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[1][0] == true)
+			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[2][0] == true)
+			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[3][0] == true)
+			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[4][0] == true)
+			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[5][0] == true)
+			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[6][0] == true)
+			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[7][0] == true)
+			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[8][0] == true)
+			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+	}
+
 	public void setAllFramesBlack() {
 		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
@@ -408,6 +455,7 @@ public class Controller {
 //	#										#
 //	#########################################
 
+	// TODO obsolet?
 	public int getClickedGrid() {
 		if (clickedGrid < 9) {
 
@@ -419,42 +467,74 @@ public class Controller {
 			return 10;
 	}
 
+	public void gridClickAction(int stack) {
+		if (clickable(stack)) {
+			doCom(stack);
+			if (destroyGood)
+				destroyGood(stack);
+			if (moveGood == 1 || moveGood == 2)
+				moveGood(stack);
+		}
+	}
+
+	public boolean clickable(int grid) {
+		if (validStacks[grid] == true)
+			return true;
+		else if (validStacksTwo[grid][0])
+			return true;
+		return false;
+	}
+
 //	#########################################
 //	#			Button Actions				#
 //	#########################################
 
-	// obsolet?
+	// TODO obsolet?
 	public void btnAccept() {
-		setAllFramesBlack();
-
-		// muss in auftrag auswählen
-
-//		setSomeFramesGreen(go_manager.checkPushObj(new Paper("blau","a4")));
-//		setSomeFramesGreen(go_manager.checkPushObj(new Stone("mamor","leicht")));
-		setSomeFramesGreen(go_manager.checkPushObj(new Stone("mamor", "schwer")));
-		System.out.print(Arrays.toString(go_manager.checkPushObj(new Stone("mamor", "schwer"))));
 
 	}
 
 	public void btnDecline() {
-//		xxx
+		switch (activeComission) {
+		case 1:
+			ap_com_one.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[0] = false;
+			uncolorComissions();
+			break;
+		case 2:
+			ap_com_two.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[1] = false;
+			uncolorComissions();
+			break;
+		case 3:
+			ap_com_three.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[2] = false;
+			uncolorComissions();
+			break;
+		}
 	}
 
 	public void btnNewCom() {
 		String[] s = co_manager.getOrder();
 		System.out.println(Arrays.toString(s));
-		setOrderLabel(s);
+		setComLabel(s);
 	}
 
+	// TODO
 	public void btnMove() {
-//		xxx
+		moveGood = 1;
+		setSomeFramesGreen(go_manager.checkMoveFrom());
 	}
 
 	public void btnDestroy() {
-//		xxx
+		setSomeFramesGreen(go_manager.checkNotEmpty());
+		destroyGood = true;
 	}
 
-	// Obsolet?
+	// TODO Obsolet?
 	public void btnShowAccount() {
 //		xxx
 	}
@@ -502,42 +582,234 @@ public class Controller {
 	}
 
 //	#########################################
-//	#										#
+//	#		  Commission management			#
 //	#########################################
-	private void setOrderLabel(String[] s) {
+	private void setComLabel(String[] s) {
 
 		if (comSpotTaken[0] != true) {
+			ap_com_one.setVisible(true);
 
 			Label_com_one_good.setText(s[2]);
 			Label_com_one_type.setText(s[3]);
 			Label_com_one_size.setText(s[4]);
 			Label_com_one_desc.setText(s[1]);
-			
+
 			comSpotTaken[0] = true;
-		}
-		else if (comSpotTaken[1] != true) {
+			comOne = s;
+		} else if (comSpotTaken[1] != true) {
+			ap_com_two.setVisible(true);
 
 			Label_com_two_good.setText(s[2]);
 			Label_com_two_type.setText(s[3]);
 			Label_com_two_size.setText(s[4]);
 			Label_com_two_desc.setText(s[1]);
-			
+
 			comSpotTaken[1] = true;
-		} 
-		else if (comSpotTaken[2] != true) {
+			comTwo = s;
+		} else if (comSpotTaken[2] != true) {
+			ap_com_three.setVisible(true);
 
 			Label_com_three_good.setText(s[2]);
 			Label_com_three_type.setText(s[3]);
 			Label_com_three_size.setText(s[4]);
 			Label_com_three_desc.setText(s[1]);
-			
+
 			comSpotTaken[2] = true;
-		}
-		else {
+			comThree = s;
+		} else {
 			System.err.print("voll");// TODO joa muss besser!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
 			co_manager.orderNumMinus();
 		}
 
+	}
+
+	private void checkDoCom() {
+
+		if (activeComission == 1) {
+			if (Objects.equals(comOne[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPushObj(newStone(comOne[3], comOne[4])));
+				if (Objects.equals(comOne[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPushObj(newPaper(comOne[3], comOne[4])));
+				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPushObj(newWood(comOne[3], comOne[4])));
+
+			} else if (comOne[1].toLowerCase() == "auslagerung") {
+				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPopObj(newStone(comOne[3], comOne[4])));
+				if (Objects.equals(comOne[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPopObj(newPaper(comOne[3], comOne[4])));
+				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPopObj(newWood(comOne[3], comOne[4])));
+			}
+
+		} else if (activeComission == 2) {
+			if (Objects.equals(comTwo[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPushObj(newStone(comTwo[3], comTwo[4])));
+				if (Objects.equals(comTwo[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPushObj(newPaper(comTwo[3], comTwo[4])));
+				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPushObj(newWood(comTwo[3], comTwo[4])));
+
+			} else if (Objects.equals(comTwo[1].toLowerCase(), "auslagerung")) {
+				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPopObj(newStone(comTwo[3], comTwo[4])));
+				if (Objects.equals(comTwo[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPopObj(newPaper(comTwo[3], comTwo[4])));
+				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPopObj(newWood(comTwo[3], comTwo[4])));
+			}
+
+		} else if (activeComission == 3) {
+			if (Objects.equals(comThree[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPushObj(newStone(comThree[3], comThree[4])));
+				if (Objects.equals(comThree[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPushObj(newPaper(comThree[3], comThree[4])));
+				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPushObj(newWood(comThree[3], comThree[4])));
+
+			} else if (Objects.equals(comThree[1].toLowerCase(), "auslagerung")) {
+				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
+					setSomeFramesGreen(go_manager.checkPopObj(newStone(comThree[3], comThree[4])));
+				if (Objects.equals(comThree[2].toLowerCase(), "papier"))
+					setSomeFramesGreen(go_manager.checkPopObj(newPaper(comThree[3], comThree[4])));
+				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
+					setSomeFramesGreen(go_manager.checkPopObj(newWood(comThree[3], comThree[4])));
+			}
+		}
+
+	}
+
+	// TODO checken ob das Pop OBJ an stelle 1 ist oder nicht
+	private void doCom(int stack) {
+		if (activeComission == 1) {
+			if (Objects.equals(comOne[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
+					go_manager.pushObj(newStone(comOne[3], comOne[4]), stack);
+				if (Objects.equals(comOne[2].toLowerCase(), "papier"))
+					go_manager.pushObj(newPaper(comOne[3], comOne[4]), stack);
+				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
+					go_manager.pushObj(newWood(comOne[3], comOne[4]), stack);
+
+			} else if (Objects.equals(comOne[1].toLowerCase(), "auslagerung")) {
+				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comOne[2].toLowerCase(), "papier"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
+					go_manager.PopObj(stack);
+
+			}
+
+			mo_manager.addBooking(Integer.parseInt(comOne[5]), comOne[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
+			label_money_change.setText("+ "+comOne[5]);
+			label_money.setText(mo_manager.getMoney()+" €");
+
+			ap_com_one.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[0] = false;
+			uncolorComissions();
+
+		} else if (activeComission == 2) {
+			if (Objects.equals(comTwo[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
+					go_manager.pushObj(newStone(comTwo[3], comTwo[4]), stack);
+				if (Objects.equals(comTwo[2].toLowerCase(), "papier"))
+					go_manager.pushObj(newPaper(comTwo[3], comTwo[4]), stack);
+				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
+					go_manager.pushObj(newWood(comTwo[3], comTwo[4]), stack);
+
+			} else if (Objects.equals(comTwo[1].toLowerCase(), "auslagerung")) {
+				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comTwo[2].toLowerCase(), "papier"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
+					go_manager.PopObj(stack);
+			}
+
+			mo_manager.addBooking(Integer.parseInt(comTwo[5]), comTwo[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
+			label_money_change.setText("+ "+comTwo[5]);
+			label_money.setText(mo_manager.getMoney()+" €");
+			
+
+			ap_com_two.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[1] = false;
+			uncolorComissions();
+
+		} else if (activeComission == 3) {
+			if (Objects.equals(comThree[1].toLowerCase(), "einlagerung")) {
+				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
+					go_manager.pushObj(newStone(comThree[3], comThree[4]), stack);
+				if (Objects.equals(comThree[2].toLowerCase(), "papier"))
+					go_manager.pushObj(newPaper(comThree[3], comThree[4]), stack);
+				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
+					go_manager.pushObj(newWood(comThree[3], comThree[4]), stack);
+
+			} else if (Objects.equals(comThree[1].toLowerCase(), "auslagerung")) {
+				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comThree[2].toLowerCase(), "papier"))
+					go_manager.PopObj(stack);
+				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
+					go_manager.PopObj(stack);
+			}
+
+			mo_manager.addBooking(Integer.parseInt(comThree[5]), comThree[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
+			label_money_change.setText("+ "+comThree[5]);
+			label_money.setText(mo_manager.getMoney()+" €");
+
+			ap_com_three.setVisible(false);
+			setAllFramesBlack();
+			comSpotTaken[2] = false;
+			uncolorComissions();
+		}
+	}
+
+	private void destroyGood(int stack) {
+		go_manager.PopObj(stack);
+		setAllFramesBlack();
+		destroyGood = false;
+		
+		mo_manager.destroy();
+		label_money_change.setTextFill(Color.web("#f84116")); 
+		label_money_change.setText("- "+500);
+		label_money.setText(mo_manager.getMoney()+" €");
+	}
+
+	private void moveGood(int stack) {
+		if (moveGood == 1) {
+			setSomeFramesGreen(go_manager.checkMoveTo());
+			moveFrom = stack;
+			moveGood = 2;
+		} else if (moveGood == 2) {
+			go_manager.move(moveFrom, stack);
+			moveGood = 0;
+			setAllFramesBlack();
+			
+			mo_manager.move();
+			label_money_change.setTextFill(Color.web("#f84116")); 
+			label_money_change.setText("- "+100);
+			label_money.setText(mo_manager.getMoney()+" €");
+		}
+	}
+
+	private Stone newStone(String type, String weight) {
+		return new Stone(type, weight);
+	}
+
+	private Paper newPaper(String color, String size) {
+		return new Paper(color, size);
+	}
+
+	private Wood newWood(String type, String form) {
+		return new Wood(type, form);
 	}
 
 //	#########################################
@@ -548,6 +820,7 @@ public class Controller {
 		ap_com_two.setStyle("-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;");
 		ap_com_three.setStyle("-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;");
 		activeComission = 0;
+		setAllFramesBlack();
 	}
 
 	public void commissionClickOne() {
@@ -556,6 +829,8 @@ public class Controller {
 		ap_com_two.setStyle("-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;");
 		ap_com_three.setStyle("-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;");
 		activeComission = 1;
+
+		checkDoCom();
 	}
 
 	public void commissionClickTwo() {
@@ -564,6 +839,8 @@ public class Controller {
 		ap_com_two.setStyle("-fx-border-color: #36cbd0; -fx-border-radius: 10; -fx-border-width: 3;");
 		ap_com_three.setStyle("-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;");
 		activeComission = 2;
+
+		checkDoCom();
 	}
 
 	public void commissionClickThree() {
@@ -572,6 +849,8 @@ public class Controller {
 		//
 		ap_com_three.setStyle("-fx-border-color: #36cbd0; -fx-border-radius: 10; -fx-border-width: 3;");
 		activeComission = 3;
+
+		checkDoCom();
 	}
 //
 //	

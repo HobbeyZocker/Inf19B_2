@@ -31,176 +31,189 @@ public class Goods_manager {
 		stacks.add(nine);
 	}
 
-//	#########################################################
+//	#########################################
 
 //	#########################################
 //	#		Looks for space on stack		#
 //	#########################################
 	private boolean lookForSpace(int sizeNeeded, Stack<Object> stack) {
-		return (3 - stack.size()  >= sizeNeeded);
+		return (3 - stack.size() >= sizeNeeded);
 	}
-//	#########################################################
+//	#########################################
 
 //	#########################################
-//	#  Push Paper, Stone and Wood on Stack  #
+//	#  				C4Push				    #
 //	#########################################
-	private boolean[] checkPushPWS(Object obj) {
+	private boolean[] checkPushPWS() {
 		boolean stackNum[] = new boolean[9];
 
 		for (int i = 0; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
 		return stackNum;
-
-//		stacks.get(call).push(obj);
 	}
-//	##########################################
 
 //	#########################################
-//	#		Push Stone on to Stack			#
-//	#########################################
-	private boolean[] checkPushHeavyStone(Object obj) {
+	private boolean[] checkPushHeavyStone() {
 		boolean stackNum[] = new boolean[9];
 
 		for (int i = 6; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(1, stacks.get(i));
 		}
-		// call = game_manager.xx(stackNum) get num zurück
-
 		return stackNum;
-
-//		stacks.get(call).push(obj);
 	}
-//	#########################################
 
 //	#########################################
-//	#		Push Wood Beams on to Stack		#
-//	#########################################
-	private boolean[] checkPushWoodedBeams(Object obj) {
+	private boolean[] checkPushWoodedBeams() {
 		boolean stackNum[] = new boolean[9];
-		
+
 		for (int i = 0; i < stacks.size(); i++) {
 			stackNum[i] = lookForSpace(3, stacks.get(i));
 		}
 		return stackNum;
-
-//		stacks.get(call).push(obj);
 	}
-//	##########################################
+//	#########################################
 
 //	#########################################
-//	#		Pop Paper from Stack			#
+//	#			     C4Pop 					#
 //	#########################################
-	private void popPaper(Object objImp) {
+	private boolean[][] checkPopPaper(Object paperImp) {
 		boolean stackNum[][] = new boolean[9][4];
-		int call = 1; // placeholder
-		Paper obj = (Paper) objImp;
+		Paper p = (Paper) paperImp;
 
 		for (int i = 0; i < stacks.size(); i++) {
-			Stack<Object> compStack = stacks.get(i);
-			for (int j = 1; i <= 3; i++) {
+			@SuppressWarnings("unchecked")
+			Stack<Object> compStack = (Stack<Object>) stacks.get(i).clone();
+			for (int j = 1; j <= 3; j++) {
 				if (compStack.size() > 0) {
-					Paper compObj = (Paper) compStack.pop();
-					stackNum[i][j] = (Objects.equals(obj.getColor(), compObj.getColor())
-							&& Objects.equals(obj.getSize(), compObj.getSize()));
+					good g = (good) compStack.pop();
+					if (g.name == 'p') {
+						Paper compPaper = (Paper) g;
+						stackNum[i][j] = (Objects.equals(p.getColor(), compPaper.getColor())
+								&& Objects.equals(p.getSize(), compPaper.getSize()));
+					}
 				}
 			}
+			if (stackNum[i][1] || stackNum[i][2] || stackNum[i][3])
+				stackNum[i][0] = true;
+//			stackNum[i][0] = false;  // sollte sowieso false sein
 		}
-		// call = game_manager.xx(stackNum) get num zurück
-		stacks.get(call).pop();
+		return stackNum;
+
+	}
+
+//	#########################################
+	private boolean[][] checkPopStone(Object stoneImp) {
+		boolean stackNum[][] = new boolean[9][4];
+		Stone s = (Stone) stoneImp;
+
+		for (int i = 0; i < stacks.size(); i++) {
+			@SuppressWarnings("unchecked")
+			Stack<Object> compStack = (Stack<Object>) stacks.get(i).clone();
+			for (int j = 1; j <= 3; j++) {
+				if (compStack.size() > 0) {
+					good g = (good) compStack.pop();
+					if (g.name == 's' || g.name == 'h') {
+						Stone compStone = (Stone) g;
+						stackNum[i][j] = (Objects.equals(s.getType(), compStone.getType())
+								&& Objects.equals(s.getWeight(), compStone.getWeight()));
+					}
+				}
+			}
+			if (stackNum[i][1] || stackNum[i][2] || stackNum[i][3])
+				stackNum[i][0] = true;
+//			stackNum[i][0] = false;  // sollte sowieso false sein
+		}
+		return stackNum;
+	}
+
+//	#########################################
+	private boolean[][] checkPopWood(Object woodImp) {
+		boolean stackNum[][] = new boolean[9][4];
+		Wood w = (Wood) woodImp;
+
+		for (int i = 0; i < stacks.size(); i++) {
+			@SuppressWarnings("unchecked")
+			Stack<Object> compStack = (Stack<Object>) stacks.get(i).clone();
+			for (int j = 1; j <= 3; j++) {
+				if (compStack.size() > 0) {
+					good g = (good) compStack.pop();
+					if (g.name == 'w' || g.name == 'b') {
+						Wood compWood = (Wood) g;
+						stackNum[i][j] = (Objects.equals(w.getType(), compWood.getType())
+								&& Objects.equals(w.getForm(), compWood.getForm()));
+					}
+				}
+			}
+			if (stackNum[i][1] || stackNum[i][2] || stackNum[i][3])
+				stackNum[i][0] = true;
+//			stackNum[i][0] = false;  // sollte sowieso false sein
+		}
+		return stackNum;
 	}
 //	#########################################
 
 //	#########################################
-//	#		Pop Stone from Stack			#
+//	#			Pop check method			#
 //	#########################################
-	private void popStone(Object obj) {
-
-	}
-//	#########################################
-
-//	#########################################
-//	#		Pop Wood from Stack			#
-//	#########################################
-	private void popWood(Object obj) {
-
-	}
-//	#########################################
-
-//	#########################################
-//	#			Pop main method				#
-//	#########################################
-	public void popObj(Object objImp) {
+	public boolean[][] checkPopObj(Object objImp) {
 		good compareObj = (good) objImp;
 
 		switch (compareObj.name) {
+		case 'h':
 		case 's':
-			System.out.println("stein klappt");
-
-			break;
+			System.out.println("aus stein klappt");
+			return checkPopStone(compareObj);
 
 		case 'w':
-			System.out.println("holz klappt");
-
-			break;
-
 		case 'b':
-			System.out.println("holz klappt");
-
-			break;
+			System.out.println("aus holz klappt");
+			return checkPopWood(compareObj);
 
 		case 'p':
-			System.out.println("papier klappt");
-			popPaper(compareObj);
-			break;
-
-		default:
-			throw new RuntimeException("Object not allowed");
+			System.out.println("aus papier klappt");
+			return checkPopPaper(compareObj);
 		}
+		return null;
 
 	}
 //	##########################################
 
 //	#########################################
-//	#			push main method			#
+//	#				Pop method				#
 //	#########################################
-	public void pushObj(Object objImp) throws Exception {
+	public void PopObj(int stack) {
+
+		if (((good) stacks.get(stack).peek()).name == 'b') {
+			// lehrt den stacks komplett wenns balken sind
+			for (int i = 0; i < 3; i++) {
+				stacks.get(stack).pop();
+			}
+		}
+		stacks.get(stack).pop();
+
+	}
+//	#########################################
+
+//	#########################################
+//	#				push method				#
+//	#########################################
+	public void pushObj(Object objImp, int stack) {
 		good obj = (good) objImp;
 
-		switch (obj.name) {//
-		case 'h':
-			System.out.println("stein klappt");
-//			pushPWS(obj);
-			break;
-
-		case 's':
-			System.out.println("stein klappt");
-//			pushHeavyStone(obj);
-			break;
-
-		case 'b':
-			System.out.println("holz klappt");
-//			pushWoodedBeams(obj);
-			break;
-
-		case 'w':
-			System.out.println("papier klappt");
-//			pushPWS(obj);
-			break;
-
-		case 'p':
-			System.out.println("papier klappt");
-//			pushPWS(obj);
-			break;
-
-		default:
-			throw new Exception("Object not allowed");
+		if (obj.name == 'b') {
+			// füllt den stacks komplett wenns balken sind
+			for (int i = 0; i < 3; i++) {
+				stacks.get(stack).push(obj);
+			}
 		}
+		stacks.get(stack).push(obj);
+
 	}
 //	###########################################
 
 //	#########################################
-//	#			push main method			#
+//	#			Push check method			#
 //	#########################################
 	public boolean[] checkPushObj(Object objImp) {
 
@@ -210,21 +223,55 @@ public class Goods_manager {
 		case 's':
 		case 'p':
 		case 'w':
-			System.out.println("stein klappt");
-			return checkPushPWS(obj);
+			System.out.println("PWS klappt");
+			return checkPushPWS();
 
 		case 'h':
 			System.out.println("stein klappt");
-			return checkPushHeavyStone(obj);
+			return checkPushHeavyStone();
 
 		case 'b':
 			System.out.println("holz klappt");
-			return checkPushWoodedBeams(obj);
+			return checkPushWoodedBeams();
 
-		default:
-			return null;
 		}
+		return null;
 	}
-//	###########################################
+//	#########################################
 
+//	#########################################
+//	#				move methods			#
+//	#########################################
+	public void move(int stackFrom, int stackTo) {
+		stacks.get(stackTo).push(stacks.get(stackFrom).pop());
+	}
+
+//	#########################################
+	public boolean[] checkMoveFrom() {
+		return checkNotEmpty();
+	}
+
+//	#########################################
+	public boolean[] checkMoveTo() {
+		boolean[] stackNotFull = new boolean[9];
+
+		for (int i = 0; i < stacks.size(); i++) {
+			stackNotFull[i] = !(stacks.get(i).size() >= 3);
+		}
+		return stackNotFull;
+	}
+//	#########################################
+
+//	#########################################
+//	#			Check not Empty				#
+//	#########################################
+	public boolean[] checkNotEmpty() {
+		boolean[] stackNotEmpty = new boolean[9];
+
+		for (int i = 0; i < stacks.size(); i++) {
+			stackNotEmpty[i] = !stacks.get(i).isEmpty();
+		}
+		return stackNotEmpty;
+	}
+//	#########################################
 }

@@ -26,7 +26,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label fx:id="label_money" layoutX="400.0" text="1500 €">
+						<Label fx:id="label_money" layoutX="400.0" text="0 €">
 							<padding>
 								<Insets bottom="5.0" right="50.0" top="5.0" />
 							</padding>
@@ -34,22 +34,14 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label fx:id="label_money_plus" layoutX="470.0" text="+ 200 €" textFill="#33af47">
+						<Label fx:id="label_money_change" layoutX="470.0" text="0 €">
 							<padding>
 								<Insets bottom="5.0" right="50.0" top="5.0" />
 							</padding>
 							<font>
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
-						</Label>
-						<Label fx:id="label_money_minus" layoutX="470.0" text="- 200 €" textFill="#f84116">
-							<padding>
-								<Insets bottom="5.0" left="4.0" right="50.0" top="5.0" />
-							</padding>
-							<font>
-								<Font name="Segoe UI Black" size="15.0" />
-							</font>
-						</Label>
+						</Label>						
 						<Button fx:id="btn_bilanz" layoutY="2.0" mnemonicParsing="false" onAction="#openBilanz" prefHeight="25.0" prefWidth="100.0" text="Bilanz" />
 					</children>
 				</Pane>
@@ -99,8 +91,8 @@
 			<children>
 				<AnchorPane prefHeight="272.0" prefWidth="218.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
 					<children>
-                  <Pane layoutX="-1019.0" layoutY="-30.0" onMouseClicked="#uncolorComissions" prefHeight="670.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-						<AnchorPane fx:id="ap_com_one" layoutX="3.0" layoutY="-1.0" onMouseClicked="#commissionClickOne" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane layoutX="-1019.0" layoutY="-30.0" onMouseClicked="#uncolorComissions" prefHeight="630.0" prefWidth="218.0" AnchorPane.bottomAnchor="-358.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+						<AnchorPane fx:id="ap_com_one" layoutX="3.0" layoutY="-1.0" onMouseClicked="#commissionClickOne" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 							<children>
 								<Label fx:id="Label_com_one_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
 									<font>
@@ -127,7 +119,7 @@
 								</Label>
 							</children>
 						</AnchorPane>
-                  <AnchorPane fx:id="ap_com_two" layoutX="10.0" layoutY="9.0" onMouseClicked="#commissionClickTwo" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+                  <AnchorPane fx:id="ap_com_two" layoutX="10.0" layoutY="9.0" onMouseClicked="#commissionClickTwo" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
                      <children>
                         <Label fx:id="Label_com_two_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
                            <font>
@@ -154,7 +146,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="ap_com_three" layoutX="10.0" layoutY="100.0" onMouseClicked="#commissionClickThree" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
+                  <AnchorPane fx:id="ap_com_three" layoutX="10.0" layoutY="100.0" onMouseClicked="#commissionClickThree" prefHeight="73.0" prefWidth="228.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
                      <children>
                         <Label fx:id="Label_com_three_good" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" prefHeight="44.0" prefWidth="72.0" text="Papier" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="3.0">
                            <font>
