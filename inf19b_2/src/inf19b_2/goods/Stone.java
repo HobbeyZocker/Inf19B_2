@@ -1,12 +1,14 @@
 package inf19b_2.goods;
 
+import java.util.Objects;
+
 public class Stone extends good {
 
 	private String type, weight;
 
 	public Stone(String type, String weight) {
 
-		if (type.equalsIgnoreCase("mamor") || type.equalsIgnoreCase("granit") || type.equalsIgnoreCase("sandstein"))
+		if (type.equalsIgnoreCase("marmor") || type.equalsIgnoreCase("granit") || type.equalsIgnoreCase("sandstein"))
 			this.type = type.toLowerCase();
 		else
 			throw new RuntimeException("Falscher Stein Typ");
@@ -16,7 +18,7 @@ public class Stone extends good {
 		else
 			throw new RuntimeException("Falsches Stein Gewicht");
 
-		if (weight == "schwer")
+		if (Objects.equals(this.weight, "schwer"))
 			super.name = 'h';
 		else
 			super.name = 's';
