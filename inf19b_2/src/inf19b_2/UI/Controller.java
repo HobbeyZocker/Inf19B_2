@@ -206,11 +206,14 @@ public class Controller {
 	private boolean[] validStacks = new boolean[9];
 	private boolean[][] validStacksTwo = new boolean[9][4];
 
-	//used spots
+	// used spots
 	private int usedSpots;
-	
+
 	// destroy
 	private boolean destroyGood;
+
+	// balken pics
+	private boolean[] balkenPic = new boolean[9];
 
 	// move
 	private int moveGood;
@@ -368,6 +371,301 @@ public class Controller {
 		grid_nine_frame_hover.setOpacity(0);
 	}
 
+//	#########################################
+//	#			set Grid images				#
+//	#########################################
+
+	private void setGridPics(int stack, String name) {
+		switch (stack) {
+		case 0:
+			if (!img_one_bottom.isVisible()) {
+				img_one_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_one_bottom.setVisible(true);
+			} else if (!img_one_middle.isVisible()) {
+				img_one_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_one_middle.setVisible(true);
+			} else if (!img_one_bottom.isVisible()) {
+				img_one_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_one_top.setVisible(true);
+			}
+			break;
+
+		case 1:
+			if (!img_two_bottom.isVisible()) {
+				img_two_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_two_bottom.setVisible(true);
+			} else if (!img_two_middle.isVisible()) {
+				img_two_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_two_middle.setVisible(true);
+			} else if (!img_two_top.isVisible()) {
+				img_two_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_two_top.setVisible(true);
+			}
+			break;
+
+		case 2:
+			if (!img_three_bottom.isVisible()) {
+				img_three_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_three_bottom.setVisible(true);
+			} else if (!img_three_middle.isVisible()) {
+				img_three_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_three_middle.setVisible(true);
+			} else if (!img_three_top.isVisible()) {
+				img_three_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_three_top.setVisible(true);
+			}
+			break;
+
+		case 3:
+			if (!img_one_bottom.isVisible()) {
+				img_four_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_four_bottom.setVisible(true);
+			} else if (!img_four_middle.isVisible()) {
+				img_four_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_four_middle.setVisible(true);
+			} else if (!img_four_top.isVisible()) {
+				img_four_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_four_top.setVisible(true);
+			}
+			break;
+
+		case 4:
+			if (!img_five_bottom.isVisible()) {
+				img_five_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_five_bottom.setVisible(true);
+			} else if (!img_five_middle.isVisible()) {
+				img_five_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_five_middle.setVisible(true);
+			} else if (!img_five_top.isVisible()) {
+				img_five_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_five_top.setVisible(true);
+			}
+			break;
+
+		case 5:
+			if (!img_six_bottom.isVisible()) {
+				img_six_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_six_bottom.setVisible(true);
+			} else if (!img_six_middle.isVisible()) {
+				img_six_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_six_middle.setVisible(true);
+			} else if (!img_six_top.isVisible()) {
+				img_six_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_six_top.setVisible(true);
+			}
+			break;
+
+		case 6:
+			if (!img_seven_bottom.isVisible()) {
+				img_seven_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_seven_bottom.setVisible(true);
+			} else if (!img_seven_middle.isVisible()) {
+				img_seven_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_seven_middle.setVisible(true);
+			} else if (!img_seven_top.isVisible()) {
+				img_seven_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_seven_top.setVisible(true);
+			}
+			break;
+
+		case 7:
+			if (!img_eight_bottom.isVisible()) {
+				img_eight_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_eight_bottom.setVisible(true);
+			} else if (!img_eight_middle.isVisible()) {
+				img_eight_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_eight_middle.setVisible(true);
+			} else if (!img_eight_top.isVisible()) {
+				img_eight_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_eight_top.setVisible(true);
+			}
+			break;
+
+		case 8:
+			if (!img_nine_bottom.isVisible()) {
+				img_nine_bottom.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_nine_bottom.setVisible(true);
+			} else if (!img_nine_middle.isVisible()) {
+				img_nine_middle.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_nine_middle.setVisible(true);
+			} else if (!img_nine_top.isVisible()) {
+				img_nine_top.setImage(
+						new Image(ImageLocation.class.getResource(name + "_placeholder.png").toExternalForm()));
+				img_nine_top.setVisible(true);
+			}
+			break;
+
+		}
+
+	}
+
+	private void delGridPics(int stack) {
+		switch (stack) {
+		case 0:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_one_top.setVisible(false);
+				img_one_middle.setVisible(false);
+				img_one_bottom.setVisible(false);
+			} else if (img_one_top.isVisible()) {
+				img_one_top.setVisible(false);
+			} else if (img_one_middle.isVisible()) {
+				img_one_middle.setVisible(false);
+			} else if (img_one_bottom.isVisible()) {
+				img_one_bottom.setVisible(false);
+			}
+			break;
+
+		case 1:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_two_top.setVisible(false);
+				img_two_middle.setVisible(false);
+				img_two_bottom.setVisible(false);
+			} else if (img_two_top.isVisible()) {
+				img_two_top.setVisible(false);
+			} else if (img_two_middle.isVisible()) {
+				img_two_middle.setVisible(false);
+			} else if (img_two_bottom.isVisible()) {
+				img_two_bottom.setVisible(false);
+			}
+			break;
+
+		case 2:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_three_top.setVisible(false);
+				img_three_middle.setVisible(false);
+				img_three_bottom.setVisible(false);
+			} else if (img_three_top.isVisible()) {
+				img_three_top.setVisible(false);
+			} else if (img_three_middle.isVisible()) {
+				img_three_middle.setVisible(false);
+			} else if (img_three_bottom.isVisible()) {
+				img_three_bottom.setVisible(false);
+			}
+			break;
+
+		case 3:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_four_top.setVisible(false);
+				img_four_middle.setVisible(false);
+				img_four_bottom.setVisible(false);
+			} else if (img_four_top.isVisible()) {
+				img_four_top.setVisible(false);
+			} else if (img_four_middle.isVisible()) {
+				img_four_middle.setVisible(false);
+			} else if (img_four_bottom.isVisible()) {
+				img_four_bottom.setVisible(false);
+			}
+			break;
+
+		case 4:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_five_top.setVisible(false);
+				img_five_middle.setVisible(false);
+				img_five_bottom.setVisible(false);
+			} else if (img_five_top.isVisible()) {
+				img_five_top.setVisible(false);
+			} else if (img_five_middle.isVisible()) {
+				img_five_middle.setVisible(false);
+			} else if (img_five_bottom.isVisible()) {
+				img_five_bottom.setVisible(false);
+			}
+			break;
+
+		case 5:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_six_top.setVisible(false);
+				img_six_middle.setVisible(false);
+				img_six_bottom.setVisible(false);
+			} else if (img_six_top.isVisible()) {
+				img_six_top.setVisible(false);
+			} else if (img_six_middle.isVisible()) {
+				img_six_middle.setVisible(false);
+			} else if (img_six_bottom.isVisible()) {
+				img_six_bottom.setVisible(false);
+			}
+			break;
+
+		case 6:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_seven_top.setVisible(false);
+				img_seven_middle.setVisible(false);
+				img_seven_bottom.setVisible(false);
+			} else if (img_seven_top.isVisible()) {
+				img_seven_top.setVisible(false);
+			} else if (img_seven_middle.isVisible()) {
+				img_seven_middle.setVisible(false);
+			} else if (img_seven_bottom.isVisible()) {
+				img_seven_bottom.setVisible(false);
+			}
+			break;
+
+		case 7:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_eight_top.setVisible(false);
+				img_eight_middle.setVisible(false);
+				img_eight_bottom.setVisible(false);
+			} else if (img_eight_top.isVisible()) {
+				img_eight_top.setVisible(false);
+			} else if (img_eight_middle.isVisible()) {
+				img_eight_middle.setVisible(false);
+			} else if (img_eight_bottom.isVisible()) {
+				img_eight_bottom.setVisible(false);
+			}
+			break;
+
+		case 8:
+			if (balkenPic[stack]) {
+				balkenPic[stack] = false;
+				img_nine_top.setVisible(false);
+				img_nine_middle.setVisible(false);
+				img_nine_bottom.setVisible(false);
+			} else if (img_nine_top.isVisible()) {
+				img_nine_top.setVisible(false);
+			} else if (img_nine_middle.isVisible()) {
+				img_nine_middle.setVisible(false);
+			} else if (img_nine_bottom.isVisible()) {
+				img_nine_bottom.setVisible(false);
+			}
+			break;
+
+		}
+
+	}
+
 //	#########################################	
 //	#		Change multiple grid color 		#	
 //	#########################################
@@ -385,7 +683,7 @@ public class Controller {
 		grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_rot.png").toExternalForm()));
 	}
 
-	public void setSomeFramesGreen(boolean[] stackNum) {
+	private void setSomeFramesGreen(boolean[] stackNum) {
 		setAllFramesRed();
 		this.validStacks = stackNum;
 		if (stackNum[0] == true)
@@ -408,10 +706,7 @@ public class Controller {
 			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 	}
 
-	private void setSomeFramesGreen(boolean[][] stackNum) {
-		setAllFramesRed();
-		Arrays.fill(validStacks, false);
-		this.validStacksTwo = stackNum;
+	private void setSomeFramesOrange(boolean[][] stackNum) { // TODO color orange
 		if (stackNum[0][0] == true)
 			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 		if (stackNum[1][0] == true)
@@ -432,7 +727,33 @@ public class Controller {
 			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
 	}
 
-	public void setAllFramesBlack() {
+	private void setSomeFramesGreen(boolean[][] stackNum) { // TODO
+		setAllFramesRed();
+		setSomeFramesOrange(stackNum);
+		Arrays.fill(validStacks, false);
+		this.validStacksTwo = stackNum;
+		if (stackNum[0][1] == true)
+			grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[1][1] == true)
+			grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[2][1] == true)
+			grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[3][1] == true)
+			grid_four_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[4][1] == true)
+			grid_five_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[5][1] == true)
+			grid_six_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[6][1] == true)
+			grid_seven_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[7][1] == true)
+			grid_eight_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+		if (stackNum[8][1] == true)
+			grid_nine_frame.setImage(new Image(ImageLocation.class.getResource("ramen_grün.png").toExternalForm()));
+
+	}
+
+	private void setAllFramesBlack() {
 		grid_one_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 		grid_two_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
 		grid_three_frame.setImage(new Image(ImageLocation.class.getResource("ramen_schwarz.png").toExternalForm()));
@@ -448,7 +769,7 @@ public class Controller {
 //	#										#
 //	#########################################
 
-	public void gridClickAction(int stack) {
+	private void gridClickAction(int stack) {
 		if (clickable(stack)) {
 			doCom(stack);
 			if (destroyGood)
@@ -458,10 +779,10 @@ public class Controller {
 		}
 	}
 
-	public boolean clickable(int grid) {
+	private boolean clickable(int grid) {
 		if (validStacks[grid] == true)
 			return true;
-		else if (validStacksTwo[grid][0])
+		else if (validStacksTwo[grid][1]) // TODO
 			return true;
 		return false;
 	}
@@ -477,34 +798,53 @@ public class Controller {
 			setAllFramesBlack();
 			comSpotTaken[0] = false;
 			uncolorComissions();
+
+			mo_manager.addNegativBooking(Integer.parseInt(comOne[5]));
+			label_money_change.setTextFill(Color.web("#f84116")); // #f84116
+			label_money_change.setText("- " + comOne[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
+
 			break;
 		case 2:
 			ap_com_two.setVisible(false);
 			setAllFramesBlack();
 			comSpotTaken[1] = false;
 			uncolorComissions();
+
+			mo_manager.addNegativBooking(Integer.parseInt(comTwo[5]));
+			label_money_change.setTextFill(Color.web("#f84116")); // #f84116
+			label_money_change.setText("- " + comTwo[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
 			break;
 		case 3:
 			ap_com_three.setVisible(false);
 			setAllFramesBlack();
 			comSpotTaken[2] = false;
 			uncolorComissions();
+
+			mo_manager.addNegativBooking(Integer.parseInt(comThree[5]));
+			label_money_change.setTextFill(Color.web("#f84116")); // #f84116
+			label_money_change.setText("- " + comThree[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
 			break;
 		}
 	}
 
 	public void btnNewCom() {
+		uncolorComissions();
 		String[] s = co_manager.getOrder();
 		System.out.println(Arrays.toString(s));
 		setComLabel(s);
 	}
 
 	public void btnMove() {
+		uncolorComissions();
 		moveGood = 1;
 		setSomeFramesGreen(go_manager.checkMoveFrom());
 	}
 
 	public void btnDestroy() {
+		uncolorComissions();
 		setSomeFramesGreen(go_manager.checkNotEmpty());
 		destroyGood = true;
 	}
@@ -537,6 +877,7 @@ public class Controller {
 	}
 
 	public void openBilanz(ActionEvent event) {
+		uncolorComissions();
 		FXMLLoader loader = new FXMLLoader();
 		try {
 			Pane pane = loader.load(getClass().getResource("bilanzDialog.fxml").openStream());
@@ -562,7 +903,7 @@ public class Controller {
 			Label_com_one_good.setText(s[2]);
 			Label_com_one_type.setText(s[3]);
 			Label_com_one_size.setText(s[4]);
-			Label_com_one_desc.setText(s[1]);
+			Label_com_one_desc.setText(s[1] + " " + s[5] + "€");
 
 			comSpotTaken[0] = true;
 			comOne = s;
@@ -572,7 +913,7 @@ public class Controller {
 			Label_com_two_good.setText(s[2]);
 			Label_com_two_type.setText(s[3]);
 			Label_com_two_size.setText(s[4]);
-			Label_com_two_desc.setText(s[1]);
+			Label_com_two_desc.setText(s[1] + " " + s[5] + "€");
 
 			comSpotTaken[1] = true;
 			comTwo = s;
@@ -582,7 +923,7 @@ public class Controller {
 			Label_com_three_good.setText(s[2]);
 			Label_com_three_type.setText(s[3]);
 			Label_com_three_size.setText(s[4]);
-			Label_com_three_desc.setText(s[1]);
+			Label_com_three_desc.setText(s[1] + " " + s[5] + "€");
 
 			comSpotTaken[2] = true;
 			comThree = s;
@@ -656,12 +997,24 @@ public class Controller {
 	private void doCom(int stack) {
 		if (activeComission == 1) {
 			if (Objects.equals(comOne[1].toLowerCase(), "einlagerung")) {
-				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
+				if (Objects.equals(comOne[2].toLowerCase(), "stein")) {
 					go_manager.pushObj(newStone(comOne[3], comOne[4]), stack);
-				if (Objects.equals(comOne[2].toLowerCase(), "papier"))
+					setGridPics(stack, "stone");
+				}
+				if (Objects.equals(comOne[2].toLowerCase(), "papier")) {
 					go_manager.pushObj(newPaper(comOne[3], comOne[4]), stack);
-				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
+					setGridPics(stack, "paper");
+				}
+				if (Objects.equals(comOne[2].toLowerCase(), "holz")) {
 					go_manager.pushObj(newWood(comOne[3], comOne[4]), stack);
+
+					if (Objects.equals(comOne[4].toLowerCase(), "balken")) {
+						for (int i = 0; i <= 3; i++)
+							setGridPics(stack, "wood");
+						balkenPic[stack] = true;
+					} else
+						setGridPics(stack, "wood");
+				}
 
 			} else if (Objects.equals(comOne[1].toLowerCase(), "auslagerung")) {
 				if (Objects.equals(comOne[2].toLowerCase(), "stein"))
@@ -670,31 +1023,43 @@ public class Controller {
 					go_manager.PopObj(stack);
 				if (Objects.equals(comOne[2].toLowerCase(), "holz"))
 					go_manager.PopObj(stack);
-
+				delGridPics(stack);
 			}
 
-			mo_manager.addBooking(Integer.parseInt(comOne[5]), comOne[1]);
-			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
-			label_money_change.setText("+ "+comOne[5]);
-			label_money.setText(mo_manager.getMoney()+" €");
+			mo_manager.addPositivBooking(Integer.parseInt(comOne[5]), comOne[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); // #f84116
+			label_money_change.setText("+ " + comOne[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
 
 			ap_com_one.setVisible(false);
 			setAllFramesBlack();
 			comSpotTaken[0] = false;
 			uncolorComissions();
-			
-			//changes the amount of takes spots
+
+			// changes the amount of takes spots
 			usedSpots++;
 			label_free_spots.setText(String.valueOf(usedSpots));
 
 		} else if (activeComission == 2) {
 			if (Objects.equals(comTwo[1].toLowerCase(), "einlagerung")) {
-				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
+				if (Objects.equals(comTwo[2].toLowerCase(), "stein")) {
 					go_manager.pushObj(newStone(comTwo[3], comTwo[4]), stack);
-				if (Objects.equals(comTwo[2].toLowerCase(), "papier"))
+					setGridPics(stack, "stone");
+				}
+				if (Objects.equals(comTwo[2].toLowerCase(), "papier")) {
 					go_manager.pushObj(newPaper(comTwo[3], comTwo[4]), stack);
-				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
+					setGridPics(stack, "paper");
+				}
+				if (Objects.equals(comTwo[2].toLowerCase(), "holz")) {
 					go_manager.pushObj(newWood(comTwo[3], comTwo[4]), stack);
+
+					if (Objects.equals(comTwo[4].toLowerCase(), "balken")) {
+						for (int i = 0; i <= 3; i++)
+							setGridPics(stack, "wood");
+						balkenPic[stack] = true;
+					} else
+						setGridPics(stack, "wood");
+				}
 
 			} else if (Objects.equals(comTwo[1].toLowerCase(), "auslagerung")) {
 				if (Objects.equals(comTwo[2].toLowerCase(), "stein"))
@@ -703,31 +1068,43 @@ public class Controller {
 					go_manager.PopObj(stack);
 				if (Objects.equals(comTwo[2].toLowerCase(), "holz"))
 					go_manager.PopObj(stack);
+				delGridPics(stack);
 			}
 
-			mo_manager.addBooking(Integer.parseInt(comTwo[5]), comTwo[1]);
-			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
-			label_money_change.setText("+ "+comTwo[5]);
-			label_money.setText(mo_manager.getMoney()+" €");
-			
+			mo_manager.addPositivBooking(Integer.parseInt(comTwo[5]), comTwo[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); // #f84116
+			label_money_change.setText("+ " + comTwo[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
 
 			ap_com_two.setVisible(false);
 			setAllFramesBlack();
 			comSpotTaken[1] = false;
 			uncolorComissions();
-			
-			//changes the amount of takes spots
+
+			// changes the amount of takes spots
 			usedSpots++;
 			label_free_spots.setText(String.valueOf(usedSpots));
 
 		} else if (activeComission == 3) {
 			if (Objects.equals(comThree[1].toLowerCase(), "einlagerung")) {
-				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
+				if (Objects.equals(comThree[2].toLowerCase(), "stein")) {
 					go_manager.pushObj(newStone(comThree[3], comThree[4]), stack);
-				if (Objects.equals(comThree[2].toLowerCase(), "papier"))
+					setGridPics(stack, "stone");
+				}
+				if (Objects.equals(comThree[2].toLowerCase(), "papier")) {
 					go_manager.pushObj(newPaper(comThree[3], comThree[4]), stack);
-				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
+					setGridPics(stack, "paper");
+				}
+				if (Objects.equals(comThree[2].toLowerCase(), "holz")) {
 					go_manager.pushObj(newWood(comThree[3], comThree[4]), stack);
+
+					if (Objects.equals(comThree[4].toLowerCase(), "balken")) {
+						for (int i = 0; i <= 3; i++)
+							setGridPics(stack, "wood");
+						balkenPic[stack] = true;
+					} else
+						setGridPics(stack, "wood");
+				}
 
 			} else if (Objects.equals(comThree[1].toLowerCase(), "auslagerung")) {
 				if (Objects.equals(comThree[2].toLowerCase(), "stein"))
@@ -736,40 +1113,43 @@ public class Controller {
 					go_manager.PopObj(stack);
 				if (Objects.equals(comThree[2].toLowerCase(), "holz"))
 					go_manager.PopObj(stack);
+				delGridPics(stack);
 			}
 
-			mo_manager.addBooking(Integer.parseInt(comThree[5]), comThree[1]);
-			label_money_change.setTextFill(Color.web("#33af47")); //#f84116
-			label_money_change.setText("+ "+comThree[5]);
-			label_money.setText(mo_manager.getMoney()+" €");
+			mo_manager.addPositivBooking(Integer.parseInt(comThree[5]), comThree[1]);
+			label_money_change.setTextFill(Color.web("#33af47")); // #f84116
+			label_money_change.setText("+ " + comThree[5]);
+			label_money.setText(mo_manager.getMoney() + " €");
 
 			ap_com_three.setVisible(false);
 			setAllFramesBlack();
 			comSpotTaken[2] = false;
 			uncolorComissions();
-			
-			//changes the amount of takes spots
+
+			// changes the amount of takes spots
 			usedSpots++;
 			label_free_spots.setText(String.valueOf(usedSpots));
 		}
 	}
 
 	private void destroyGood(int stack) {
+		uncolorComissions();
 		go_manager.PopObj(stack);
 		setAllFramesBlack();
 		destroyGood = false;
-		
+
 		mo_manager.destroy();
-		label_money_change.setTextFill(Color.web("#f84116")); 
-		label_money_change.setText("- "+500);
-		label_money.setText(mo_manager.getMoney()+" €");
-		
-		//changes the amount of takes spots
+		label_money_change.setTextFill(Color.web("#f84116"));
+		label_money_change.setText("- " + 500);
+		label_money.setText(mo_manager.getMoney() + " €");
+
+		// changes the amount of takes spots
 		usedSpots--;
 		label_free_spots.setText(String.valueOf(usedSpots));
 	}
 
 	private void moveGood(int stack) {
+		uncolorComissions();
 		if (moveGood == 1) {
 			setSomeFramesGreen(go_manager.checkMoveTo());
 			moveFrom = stack;
@@ -778,11 +1158,14 @@ public class Controller {
 			go_manager.move(moveFrom, stack);
 			moveGood = 0;
 			setAllFramesBlack();
-			
+
+			delGridPics(moveFrom);
+			setGridPics(stack, go_manager.peak(stack));
+
 			mo_manager.move();
-			label_money_change.setTextFill(Color.web("#f84116")); 
-			label_money_change.setText("- "+100);
-			label_money.setText(mo_manager.getMoney()+" €");
+			label_money_change.setTextFill(Color.web("#f84116"));
+			label_money_change.setText("- " + 100);
+			label_money.setText(mo_manager.getMoney() + " €");
 		}
 	}
 

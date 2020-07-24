@@ -33,6 +33,10 @@ public class Wood extends good {
 		return this.form;
 	}
 
+	public String toString() {
+		return "wood";
+	}
+	
 }
 
 

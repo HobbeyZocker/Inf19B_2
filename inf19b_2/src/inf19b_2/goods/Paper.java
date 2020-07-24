@@ -24,5 +24,9 @@ public class Paper extends good {
 	public String getSize() {
 		return this.size;
 	}
+	
+	public String toString() {
+		return "paper";
+	}
 
 }

@@ -31,5 +31,9 @@ public class Stone extends good {
 	public String getWeight() {
 		return this.weight;
 	}
+	
+	public String toString() {
+		return "stone";
+	}
 
 }

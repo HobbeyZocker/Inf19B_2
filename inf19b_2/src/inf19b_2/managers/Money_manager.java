@@ -16,9 +16,13 @@ public class Money_manager {
 		return booking;
 	}
 
-	public void addBooking(int money, String type) { // get called for action made
+	public void addPositivBooking(int money, String type) { // get called for action made
 		bank += money;
 		bookingList.add(book("+" + String.valueOf(money), type));
+	}
+	public void addNegativBooking(int money) { // get called for action made
+		bank -= money;
+		bookingList.add(book("-" + String.valueOf(money), "Ablehnung"));
 	}
 
 	public void move() {

@@ -274,4 +274,7 @@ public class Goods_manager {
 		return stackNotEmpty;
 	}
 //	#########################################
+	public String peak(int stack) {
+		return stacks.get(stack).peek().toString();
+	}
 }
