@@ -55,7 +55,7 @@
 								<Font name="Segoe UI Black" size="15.0" />
 							</font>
 						</Label>
-						<Label fx:id="label_free_spots" layoutX="150.0" text="2">
+						<Label fx:id="label_free_spots" layoutX="150.0" text="0">
 							<padding>
 								<Insets bottom="5.0" left="10.0" top="5.0" />
 							</padding>
@@ -175,12 +175,12 @@
                   </AnchorPane>
 					</children>
 				</AnchorPane>
-				<AnchorPane layoutX="-9.0" onMouseClicked="#uncolorComissions" prefHeight="262.0" prefWidth="209.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+				<AnchorPane layoutX="-9.0" onMouseClicked="#uncolorComissions" prefHeight="359.0" prefWidth="237.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
 					<children>
-						<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" prefHeight="30.0" prefWidth="100.0" text="Ablehnen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-						<Button fx:id="btw_next_cont" layoutY="45.0" mnemonicParsing="false" onAction="#btnNewCom" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-						<Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnMove" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-						<Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+						<Button fx:id="btn_reject" mnemonicParsing="false" onAction="#btnDecline" prefHeight="60.0" prefWidth="100.0" text="Ablehnen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+						<Button fx:id="btw_next_cont" mnemonicParsing="false" onAction="#btnNewCom" prefHeight="60.0" prefWidth="140.0" text="Nächster Auftrag" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0" />
+						<Button fx:id="btw_move_obj" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#btnMove" prefHeight="60.0" text="Objekt Bewegen" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
+						<Button fx:id="btw_destroy_obj" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnDestroy" prefHeight="60.0" prefWidth="217.0" text="Objekt Zerstören" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="245.0" />
 					</children>
 				</AnchorPane>
 			</children>

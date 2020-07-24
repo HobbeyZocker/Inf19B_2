@@ -4,14 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
-
 import inf19b_2.resources.textures.ImageLocation;
 import inf19b_2.goods.Paper;
 import inf19b_2.goods.Stone;
 import inf19b_2.goods.Wood;
-import inf19b_2.goods.good;
 import inf19b_2.managers.Commission_manager;
-import inf19b_2.managers.Game_manager;
 import inf19b_2.managers.Goods_manager;
 import inf19b_2.managers.IO_manager;
 import inf19b_2.managers.Money_manager;
@@ -200,9 +197,7 @@ public class Controller {
 	@FXML
 	private AnchorPane ap_com_three;
 
-	private int clickedGrid = 10;
-
-	// Arrays which contain the Commission
+	// Values todo with Commission
 	private String[] comOne;
 	private String[] comTwo;
 	private String[] comThree;
@@ -211,11 +206,9 @@ public class Controller {
 	private boolean[] validStacks = new boolean[9];
 	private boolean[][] validStacksTwo = new boolean[9][4];
 
-	// goods = TODO obsolete?
-	Stone s;
-	Paper p;
-	Wood w;
-
+	//used spots
+	private int usedSpots;
+	
 	// destroy
 	private boolean destroyGood;
 
@@ -455,18 +448,6 @@ public class Controller {
 //	#										#
 //	#########################################
 
-	// TODO obsolet?
-	public int getClickedGrid() {
-		if (clickedGrid < 9) {
-
-			int temp = clickedGrid;
-			clickedGrid = 10;
-			System.out.print(temp);
-			return temp;
-		} else
-			return 10;
-	}
-
 	public void gridClickAction(int stack) {
 		if (clickable(stack)) {
 			doCom(stack);
@@ -488,11 +469,6 @@ public class Controller {
 //	#########################################
 //	#			Button Actions				#
 //	#########################################
-
-	// TODO obsolet?
-	public void btnAccept() {
-
-	}
 
 	public void btnDecline() {
 		switch (activeComission) {
@@ -523,7 +499,6 @@ public class Controller {
 		setComLabel(s);
 	}
 
-	// TODO
 	public void btnMove() {
 		moveGood = 1;
 		setSomeFramesGreen(go_manager.checkMoveFrom());
@@ -532,11 +507,6 @@ public class Controller {
 	public void btnDestroy() {
 		setSomeFramesGreen(go_manager.checkNotEmpty());
 		destroyGood = true;
-	}
-
-	// TODO Obsolet?
-	public void btnShowAccount() {
-//		xxx
 	}
 
 	public void btnLoadCsv() {
@@ -712,6 +682,10 @@ public class Controller {
 			setAllFramesBlack();
 			comSpotTaken[0] = false;
 			uncolorComissions();
+			
+			//changes the amount of takes spots
+			usedSpots++;
+			label_free_spots.setText(String.valueOf(usedSpots));
 
 		} else if (activeComission == 2) {
 			if (Objects.equals(comTwo[1].toLowerCase(), "einlagerung")) {
@@ -741,6 +715,10 @@ public class Controller {
 			setAllFramesBlack();
 			comSpotTaken[1] = false;
 			uncolorComissions();
+			
+			//changes the amount of takes spots
+			usedSpots++;
+			label_free_spots.setText(String.valueOf(usedSpots));
 
 		} else if (activeComission == 3) {
 			if (Objects.equals(comThree[1].toLowerCase(), "einlagerung")) {
@@ -769,6 +747,10 @@ public class Controller {
 			setAllFramesBlack();
 			comSpotTaken[2] = false;
 			uncolorComissions();
+			
+			//changes the amount of takes spots
+			usedSpots++;
+			label_free_spots.setText(String.valueOf(usedSpots));
 		}
 	}
 
@@ -781,6 +763,10 @@ public class Controller {
 		label_money_change.setTextFill(Color.web("#f84116")); 
 		label_money_change.setText("- "+500);
 		label_money.setText(mo_manager.getMoney()+" €");
+		
+		//changes the amount of takes spots
+		usedSpots--;
+		label_free_spots.setText(String.valueOf(usedSpots));
 	}
 
 	private void moveGood(int stack) {

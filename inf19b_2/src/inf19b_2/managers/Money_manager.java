@@ -4,16 +4,13 @@ import java.util.ArrayList;
 
 public class Money_manager {
 
-	// Aufbau: num, typ (Einlagerungsauftrag[in], Auslagerungsauftrag[out],
-	// Umlagerung[re], Verschrottung[del]), betrag
-
 	private static ArrayList<String[]> bookingList = new ArrayList<String[]>();
 	private int bank;
 
-	private String[] book(String amount, String type) { // makes a new Array, ready to be added to the ArrayList
+	private String[] book(String amount, String type) {
 		String[] booking = new String[3];
-		booking[0] = type; // Number Tab
-		booking[1] = String.valueOf(bank); // Type of commission
+		booking[0] = type;
+		booking[1] = String.valueOf(bank);
 		booking[2] = amount; // how much money gets added or subtracted
 
 		return booking;
